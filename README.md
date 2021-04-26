@@ -4,4 +4,4 @@
 
 核心技術：Vue 3 + Typescript + Vite + WebSocket
 
-使用Firebase的Realtime Database (WebSocket技術)
+使用Firebase的Realtime Database
