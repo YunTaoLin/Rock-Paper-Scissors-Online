@@ -56,7 +56,6 @@ export default {
             },
           })
           .then(() => {
-            alert("房間建立成功");
             store.commit("setLinkedRoom", createRoomId.value);
             store.commit("setRole", "play_A");
             //設定定時器，每一分鐘告訴db，連線還存在
@@ -69,7 +68,7 @@ export default {
           });
       });
     };
-    const close = () => [content.emit("close")];
+    const close = () =>content.emit("close") ;
     return { createRoom, createRoomId, close };
   },
 };

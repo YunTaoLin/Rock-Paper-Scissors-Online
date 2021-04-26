@@ -126,7 +126,6 @@ export default {
     if (store.state.linkedRoom) {
       db.ref(`/room/${store.state.linkedRoom}/`).on("value", (snapshot) => {
         let state = snapshot.val();
-        console.log("我改變了", state);
         //等待對手加入
         if (state.play_A?.join && state.play_B?.join) {
           startGame.value = true;

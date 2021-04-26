@@ -29,7 +29,6 @@ export default {
     const db = firebase.database();
     const joinRoom = () => {
       const theRef = db.ref(`/room/${joinRoomId.value}`);
-      console.log("有阿");
       theRef.once("value").then((snapshot) => {
         const data = snapshot.val();
         if (!data) return alert("該房間不存在喔");
@@ -47,7 +46,6 @@ export default {
         } else {
           return alert("該房間人數已額滿");
         }
-        console.log(store.state.role)
         store.commit("setLinkedRoom", joinRoomId.value);
         db.ref(`/room/${joinRoomId.value}/${store.state.role}`)
           .update({
@@ -55,7 +53,6 @@ export default {
             join: true,
           })
           .then(() => {
-            alert("加入成功");
             setInterval(() => {
               db.ref(`/room/${joinRoomId.value}/${store.state.role}`).update({
                 lastConnect: moment(new Date()).format("YYYY/MM/DD hh:mm"),
@@ -65,7 +62,7 @@ export default {
           });
       });
     };
-    const close = () => [content.emit("close")];
+    const close = () => content.emit("close");
     return { joinRoom, joinRoomId, close };
   },
 };
