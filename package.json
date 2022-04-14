@@ -2,7 +2,7 @@
   "name": "socket-game",
   "version": "0.0.0",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --mode dev",
     "build": "vue-tsc --noEmit && vite build",
     "serve": "vite preview"
   },
