@@ -29,5 +29,7 @@ export default defineConfig({
     cssCodeSplit: true,
     sourcemap: false,
     manifest: false,
+    
+  base:"/Paper-Scissors-Stone-Online/",
   },
 });

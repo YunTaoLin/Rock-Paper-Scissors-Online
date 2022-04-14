@@ -15,6 +15,7 @@ export default {
     firebase.initializeApp(firebaseConfig);
     let appHeihgt = document.documentElement.clientHeight;
     let isSafari = ref(false);
+    let mainHeihgt = document.documentElement.clientHeight;
     if (
       /Safari/.test(navigator.userAgent) &&
       !/Chrome/.test(navigator.userAgent)
@@ -22,7 +23,7 @@ export default {
       //是safari
       isSafari.value = false;
     }
-    return { appHeihgt, isSafari };
+    return { appHeihgt, isSafari, mainHeihgt };
   },
 };
 </script>
@@ -33,13 +34,14 @@ html,
 body {
   width: 100%;
   height: auto;
-  background: linear-gradient(70deg, #72edf2, rgb(121, 178, 243)) 100% 100% no-repeat;
+  background: linear-gradient(70deg, #72edf2, rgb(121, 178, 243)) 100% 100%
+    no-repeat;
   padding: 0;
   margin: 0;
-   overflow: hidden;
-   *{
-     box-sizing: border-box;
-   }
+  overflow: hidden;
+  * {
+    box-sizing: border-box;
+  }
 }
 #app {
   width: 100%;
