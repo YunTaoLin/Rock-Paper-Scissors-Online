@@ -1,7 +1,25 @@
-@import '_other.scss';
-@import '_unity.scss';
+@mixin laptop {
+  @media (max-width: 1263px) {
+    @content;
+  }
+}
 
-*{
-    user-select: none;
-    font-family:sans-serif;
+@mixin pad {
+  @media (max-width: 959px) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: 576px) {
+    @content;
+  }
+}
+
+@import "_other.scss";
+@import "_unity.scss";
+
+* {
+  user-select: none;
+  font-family: sans-serif;
 }

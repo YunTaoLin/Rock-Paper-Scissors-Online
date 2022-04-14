@@ -1,6 +1,6 @@
 <template>
   <div class="wrap">
-    <div class="roomId">房間號碼：{{ roomId }}</div>
+    <div class="roomId">房號( Room ID )：{{ roomId }}</div>
     <div class="container">
       <div class="player self">
         <div class="box">
@@ -11,12 +11,17 @@
           >
             <figure>
               <img :src="selected.img" alt="" />
-              <figcaption>{{ selected.name }}</figcaption>
+              <figcaption>
+                {{ selected.name }} <span>{{ selected.en }}</span>
+              </figcaption>
             </figure>
           </div>
           <div v-else>?</div>
         </div>
-        <h2>自己</h2>
+        <h2>
+          自己<br />
+          You
+        </h2>
       </div>
       <div class="vs">VS</div>
       <div class="player other">
@@ -28,12 +33,15 @@
           >
             <figure>
               <img :src="opponentSelected.img" alt="" />
-              <figcaption>{{ opponentSelected.name }}</figcaption>
+              <figcaption>
+                {{ opponentSelected.name }}
+                <span>{{ opponentSelected.en }}</span>
+              </figcaption>
             </figure>
           </div>
           <div v-else>?</div>
         </div>
-        <h2>對手</h2>
+        <h2>對手 <br />Opponent</h2>
       </div>
     </div>
     <div class="select" v-if="!result">
@@ -48,7 +56,9 @@
         >
           <figure>
             <img :src="item.img" alt="" />
-            <figcaption>{{ item.name }}</figcaption>
+            <figcaption>
+              {{ item.name }} <span>{{ item.en }}</span>
+            </figcaption>
           </figure>
         </div>
       </div>
@@ -57,6 +67,8 @@
       <div class="result_title">{{ result }}</div>
       <div class="refreshBtn" @click="again()">再來一次！</div>
     </div>
+    <!-- //撐高底部 -->
+    <div class="space"></div>
     <div class="loading" v-show="!startGame">等待對手加入中...</div>
     <div class="loading" v-show="waiting">等待對手出拳...</div>
   </div>
@@ -75,16 +87,19 @@ const selectList = [
     name: "剪刀",
     img: img_scissors,
     color: "#86bebb",
+    en: "Scissors",
   },
   {
     name: "石頭",
     img: img_stone,
     color: "#e0808b",
+    en: "Stone",
   },
   {
     name: "布",
     img: img_paper,
     color: "#84bc7f",
+    en: "Paper",
   },
 ];
 export default {
@@ -92,18 +107,18 @@ export default {
     const store = useStore();
     const router = useRouter();
     const db = firebase.database();
-    const selected = reactive({ name: "", img: "", color: "" });
-    const opponentSelected = reactive({ name: "", img: "", color: "" });
+    const selected = reactive({ name: "", img: "", color: "", en: "" });
+    const opponentSelected = reactive({ name: "", img: "", color: "", en: "" });
     const startGame = ref(false);
     const waiting = ref(false);
     const result = ref("");
+    const myEnum = ["你贏了 Win", "你輸了 lose", "平手 Draw"];
     if (!store.state.linkedRoom) {
       router.replace("/");
     }
     const resultHandler = () => {
       let mySelect = selected.name;
       let opponent = opponentSelected.name;
-      const myEnum = ["你贏了", "你輸了", "雙方平手"];
       switch (mySelect) {
         case "剪刀":
           if (opponent == "剪刀") result.value = myEnum[2];
@@ -142,6 +157,7 @@ export default {
             opponentSelected.name = opponentSelectItem.name;
             opponentSelected.img = opponentSelectItem.img;
             opponentSelected.color = opponentSelectItem.color;
+            opponentSelected.en = opponentSelectItem.en;
             resultHandler();
           }
         }
@@ -151,6 +167,7 @@ export default {
       selected.name = item.name;
       selected.img = item.img;
       selected.color = item.color;
+      selected.en = item.en;
       waiting.value = true;
       db.ref(`/room/${store.state.linkedRoom}/${store.state.role}/`).update({
         select: item.name,
@@ -163,11 +180,13 @@ export default {
       selected.name = "";
       selected.img = "";
       selected.color = "";
+      selected.en = "";
       opponentSelected.name = "";
       opponentSelected.img = "";
       opponentSelected.color = "";
+      opponentSelected.en = "";
       startGame.value = false;
-      result.value='';
+      result.value = "";
       db.ref(`/room/${store.state.linkedRoom}/${store.state.role}/`).update({
         select: null,
         join: true,
@@ -191,17 +210,35 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "@/scss/main.scss";
 .wrap {
+  width: 100%;
+  height: 100%;
   padding: 24px 12px;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  @include pad {
+    justify-content: flex-start;
+  }
+  .space {
+    height: 5vh;
+  }
 }
 .roomId {
   margin-bottom: 24px;
-  font-size: 48px;
+  font-size: 36px;
   text-align: center;
   font-weight: 700;
+  @include pad {
+    font-size: 24px;
+  }
 }
 .container {
+  width: 100%;
+  height: 40vh;
+  max-height: 330px;
   margin: 0 auto;
   display: flex;
   justify-content: space-around;
@@ -210,14 +247,24 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 100%;
+    @include pad {
+      width: 35%;
+      height: 55vw;
+    }
     h2 {
-      font-size: 36px;
+      font-size: 24px;
       text-align: center;
       font-weight: 700;
+      @include pad {
+        padding-top: 4px;
+        font-size: 16px;
+      }
     }
     .box {
       width: 200px;
-      height: 300px;
+      height: 100%;
+      max-height: 300px;
       border-radius: 12px;
       border: 12px solid #000;
       display: flex;
@@ -225,21 +272,46 @@ export default {
       align-items: center;
       font-size: 72px;
       background-color: #fff;
+      @include pad {
+        width: 100%;
+        border: 6px solid #000;
+      }
+      .selectItem {
+        width: 75%;
+        height: 80%;
+        margin: 0;
+        max-height: none;
+        @include pad {
+          width: 88%;
+          height: 90%;
+        }
+      }
     }
   }
   .vs {
     font-size: 72px;
     margin: 0 24px;
     color: rgb(236, 205, 102);
+    @include pad {
+      font-size: 40px;
+      margin: 0 12px;
+    }
   }
 }
 .select {
+  width: 100%;
+  height: 33vh;
+  max-height: 250px;
   margin: 12px auto 0;
   display: flex;
   flex-direction: column;
   border: 8px solid #000;
   background-color: #f5f4e2;
-  padding: 24px;
+  padding: 12px;
+  @include pad {
+    padding: 4px;
+    justify-content: space-between;
+  }
   .select_title {
     font-size: 36px;
     text-align: center;
@@ -249,25 +321,44 @@ export default {
   .group {
     display: flex;
     justify-content: center;
+    height: calc(100% - 60px);
   }
 }
 //元素
 .selectItem {
+  flex-grow: 0;
   width: 140px;
-  height: 140px;
+  height: 100%;
   margin: 0 12px;
   font-size: 16px;
   font-weight: 700;
   transition: 0.3s;
   border: 4px solid #000;
+  @include pad {
+    width: 24vw;
+    margin: 0 8px;
+    max-height: 30vw;
+  }
   figure {
     width: 100%;
-    height: 100%;
+    height: 95%;
     margin: 0;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     cursor: pointer;
+    white-space: nowrap;
+    font-size: 18px;
+    @include pad {
+      font-size: 14px;
+    }
     img {
       width: 70%;
+    }
+    span {
+      font-size: 12px;
     }
   }
   &:hover {
@@ -288,15 +379,22 @@ export default {
   font-size: 72px;
   font-weight: 700;
   white-space: 2px;
+  @include pad {
+    font-size: 44px;
+    background-color: rgba(252, 252, 252, 0.9);
+  }
 }
 //結果
 .result {
+  width: 100%;
+  height: 33vh;
+  max-height: 250px;
   display: flex;
   flex-direction: column;
   align-items: center;
   .result_title {
     font-weight: 700;
-    font-size: 72px;
+    font-size: 48px;
     text-align: center;
     margin-bottom: 24px;
   }

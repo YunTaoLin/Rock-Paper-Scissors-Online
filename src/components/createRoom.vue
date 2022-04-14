@@ -3,13 +3,14 @@
     <div class="popup">
       <div class="close" @click="close">X</div>
       <div class="createRoom">
-        <h2 class="mb_16">創立房間</h2>
+        <h2 class="mb_16">創建房間</h2>
+        <div class="createRoom__title">請自訂房間ID：</div>
         <input
-          type="number"
-          placeholder="請輸入自訂房間ID (數字)"
+          type="phone"
+          placeholder="Create Room ID"
           v-model="createRoomId"
         />
-        <div class="btn mt_16 mb_12" @click="createRoom">創立</div>
+        <div class="btn mt_16 mb_12" @click="createRoom">創建 Create</div>
       </div>
     </div>
   </div>
@@ -39,7 +40,7 @@ export default {
             snapshot.val().play_B.lastConnect
           ).isAfter(moment().add(-2, "m"));
           if (playA_status && playB_status) {
-            return alert("已經存在該房間囉，請換一個房號ID");
+            return alert("已經存在該房間囉，請換一個房號");
           }
         }
         theRef
@@ -75,6 +76,7 @@ export default {
 </script>
 
 <style lang="scss">
+@import "@/scss/main.scss";
 .createRoom {
   display: flex;
   flex-direction: column;
@@ -85,6 +87,12 @@ export default {
   h2 {
     font-size: 36px;
   }
+  &__title{
+    width: calc(80% + 16px);
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: left;
+  }
   input {
     padding: 16px 12px;
     width: 80%;
@@ -93,6 +101,9 @@ export default {
     border: 4px solid #000;
     text-align: center;
     background-color: #ddd;
+    @include pad{
+        font-size: 16px;
+    }
     &:focus {
       outline: none;
       border: 4px solid #000;
@@ -102,10 +113,10 @@ export default {
     -webkit-appearance: none;
   }
   .btn {
-    width: 140px;
+    width: 180px;
     height: 56px;
     background-color: rgb(245, 212, 102);
-    border: 2px solid #000;
+    border: 3px solid #000;
     border-radius: 120px;
     display: flex;
     justify-content: center;
