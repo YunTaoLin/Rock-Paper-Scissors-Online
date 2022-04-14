@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory } from "vue-router";
+import { createRouter, createWebHashHistory } from "vue-router";
 
 import Enter from "./view/Enter.vue";
 import GameRoom from "./view/GameRoom.vue";
@@ -21,7 +21,7 @@ const routes = [
 ];
 
 const router = createRouter({
-  history: createWebHistory("/Paper-Scissors-Stone-Online/dist"),
+  history: createWebHashHistory("/Paper-Scissors-Stone-Online/dist"),
   routes,
 });
 
