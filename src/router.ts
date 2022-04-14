@@ -16,12 +16,12 @@ const routes = [
   },
   {
     path: "/:pathMatch(.*)*",
-    redirect: {path:'/'}
-  }
+    redirect: { path: "/" },
+  },
 ];
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHistory("/Paper-Scissors-Stone-Online/dist"),
   routes,
 });
 
