@@ -21,7 +21,7 @@ const routes = [
 ];
 
 const router = createRouter({
-  history: createWebHashHistory("/Paper-Scissors-Stone-Online/dist"),
+  history: createWebHashHistory("/Paper-Scissors-Rock-Online/dist"),
   routes,
 });
 

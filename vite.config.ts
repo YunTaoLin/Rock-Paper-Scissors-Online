@@ -31,6 +31,6 @@ export default defineConfig({
     manifest: false,
     
   },
-  base: "/Paper-Scissors-Stone-Online/dist/",
+  base: "/Rock-Paper-Scissors-Online/dist/",
   
 });

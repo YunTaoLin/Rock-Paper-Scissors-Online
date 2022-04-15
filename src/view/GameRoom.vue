@@ -93,7 +93,7 @@ const selectList = [
     name: "石頭",
     img: img_stone,
     color: "#e0808b",
-    en: "Stone",
+    en: "Rock",
   },
   {
     name: "布",

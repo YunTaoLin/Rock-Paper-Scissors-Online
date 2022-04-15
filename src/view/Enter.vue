@@ -2,7 +2,7 @@
   <div id="EnterPage">
     <h1>
       線上猜拳<br class="hidden-pad-up" />
-      Paper Scissors Stone
+      Paper Scissors Rock
     </h1>
     <div class="btn_group">
       <div class="btn" @click="openCreateRoom = true">
