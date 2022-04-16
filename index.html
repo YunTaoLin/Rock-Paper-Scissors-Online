@@ -6,12 +6,13 @@
       content="_AD3uqSSpdaSwYwXvN7GHDphV8eTxIR1mxLheJod_fw"
     />
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Cache-Control" content="no-cache, must-revalidate" />
+    <meta http-equiv="expires" content="0" />
     <link rel="icon" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>線上猜拳 Rock Paper Scissors</title>
     <meta http-equiv="pragma" content="no-cache" />
-    <meta http-equiv="Cache-Control" content="no-cache, must-revalidate" />
-    <meta http-equiv="expires" content="0" />
     <meta
       property="og:url"
       content="https://yuntaolin.github.io/Rock-Paper-Scissors-Online/dist/"
@@ -50,11 +51,19 @@
       content="https://yuntaolin.github.io/Rock-Paper-Scissors-Online/dist/logo.jpg"
       alt="logo"
     />
-
+  </head>
+  <body>
+    <h1 style="display: none">線上猜拳 Rock Paper Scissors</h1>
+    <p style="display: none">
+      作者: <a href="https://github.com/YunTaoLin">YunTaoLin</a>
+    </p>
+    <div id="app"></div>
+    <noscript>請開啟JS</noscript>
+    <script type="module" src="/src/main.ts"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script
       async
-      src="https://www.googletagmanager.com/gtag/js?id=G-H80QDCHCZX"
+      src="https://www.googletagmanager.com/gtag/js?id=G-TMPNZRY5PQ"
     ></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -63,17 +72,43 @@
       }
       gtag("js", new Date());
 
-      gtag("config", "G-H80QDCHCZX");
+      gtag("config", "G-TMPNZRY5PQ");
     </script>
-  </head>
-  <body>
-    <h1 style="display: none">線上猜拳 Rock Paper Scissors</h1>
-    <p style="display: none">
-      作者: <a href="https://github.com/YunTaoLin">YunTaoLine</a>
-    </p>
-    <div id="app"></div>
-    <noscript>請開啟JS</noscript>
-    <script type="module" src="/src/main.ts"></script>
+    <!-- Meta Pixel Code -->
+    <script>
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod
+            ? n.callMethod.apply(n, arguments)
+            : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(
+        window,
+        document,
+        "script",
+        "https://connect.facebook.net/en_US/fbevents.js"
+      );
+      fbq("init", "508273617461171");
+      fbq("track", "PageView");
+    </script>
+    <noscript
+      ><img
+        height="1"
+        width="1"
+        style="display: none"
+        src="https://www.facebook.com/tr?id=508273617461171&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
   </body>
 </html>
-
