@@ -1,3 +1,4 @@
-# https://www.robotstxt.org/robotstxt.html
 User-agent: *
-Disallow:
+Allow: /
+
+Sitemap: https://yuntaolin.github.io/Rock-Paper-Scissors-Online/sitemap.xml

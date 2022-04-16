@@ -1,10 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
-		<loc>https://yuntaolin.github.io/Rock-Paper-Scissors-Online/</loc>
-		<lastmod>2022-04-15T08:37:03+00:00</lastmod>
+		<loc>https://yuntaolin.github.io/Rock-Paper-Scissors-Online/index.html</loc>
+		<lastmod>2022-04-15</lastmod>
+		<changefreq>monthly</changefreq>
+<priority>0.6</priority>
 	</url>
 	<url>
-		<loc>https://yuntaolin.github.io/Rock-Paper-Scissors-Online/#/</loc><lastmod>2022-04-15T08:37:03+00:00</lastmod>
+		<loc>https://yuntaolin.github.io/Rock-Paper-Scissors-Online/</loc>
+		<lastmod>2022-04-15</lastmod>
+		<changefreq>monthly</changefreq>
+<priority>0.6</priority>
 	</url>
+	<url>
+		<loc>https://yuntaolin.github.io/Rock-Paper-Scissors-Online/index.html</loc>
+		<lastmod>2022-04-15</lastmod>
+		<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+	</url>
+	<url>
+		<loc>https://yuntaolin.github.io/Rock-Paper-Scissors-Online/#/</loc><lastmod>2022-04-15</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.6</priority></url>
 </urlset>
