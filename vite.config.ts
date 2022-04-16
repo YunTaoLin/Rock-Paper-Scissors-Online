@@ -23,7 +23,7 @@ export default defineConfig({
     },
   },
   build: {
-    outDir: "dist",
+    outDir: "docs",
     assetsDir: "assets",
     assetsInlineLimit: 4096,
     cssCodeSplit: true,
@@ -31,6 +31,6 @@ export default defineConfig({
     manifest: false,
     
   },
-  base: "/Rock-Paper-Scissors-Online/dist/",
+  base: "/Rock-Paper-Scissors-Online/",
   
 });
