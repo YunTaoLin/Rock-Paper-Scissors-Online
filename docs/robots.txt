@@ -1,4 +1,4 @@
-User-agent: *
-Allow: /
-
 Sitemap: https://yuntaolin.github.io/Rock-Paper-Scissors-Online/sitemap.xml
+
+User-agent: *
+Disallow:
