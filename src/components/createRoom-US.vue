@@ -3,9 +3,13 @@
     <div class="popup">
       <div class="close" @click="close">X</div>
       <div class="createRoom">
-        <h2 class="mb_16">創建房間</h2>
-        <input type="phone" placeholder="請自訂房間ID" v-model="createRoomId" />
-        <div class="btn mt_16 mb_12" @click="createRoom">創建</div>
+        <h2 class="mb_16">Create Room</h2>
+        <input
+          type="phone"
+          placeholder="Create Room ID"
+          v-model="createRoomId"
+        />
+        <div class="btn mt_16 mb_12" @click="createRoom">Go!</div>
       </div>
     </div>
   </div>
@@ -18,14 +22,13 @@ import { useRouter } from "vue-router";
 import moment from "moment";
 import { useStore } from "vuex";
 export default {
-  setup(props: any, content: any) {
+  setup(props:any, content:any) {
     const store = useStore();
     const router = useRouter();
     const createRoomId = ref(null);
     const db = firebase.database();
     const createRoom = () => {
-      if (!createRoomId.value) return alert("請輸入房號");
-
+      if(!createRoomId.value) return alert('input room id pleace!')
       //先查找是否有該房間
       const theRef = db.ref(`/room/${createRoomId.value}`);
       theRef.once("value").then(function (snapshot) {
@@ -37,7 +40,7 @@ export default {
             snapshot.val().play_B.lastConnect
           ).isAfter(moment().add(-2, "m"));
           if (playA_status && playB_status) {
-            return alert("已經存在該房間囉，請換一個房號");
+            return alert("This room already exists, please change the room id");
           }
         }
         theRef
@@ -59,14 +62,14 @@ export default {
             //設定定時器，每一分鐘告訴db，連線還存在
             setInterval(() => {
               db.ref(`/room/${createRoomId.value}/play_A`).update({
-                lastConnect: moment(new Date()).format("YYYY/MM/DD hh:mm"),
+                lastConnect: moment(new Date()).format("YYYY/MM/DD hh:mm")
               });
             }, 60000);
-            router.push("/zh-tw/gameRoom");
+            router.push("/en-us/gameRoom");
           });
       });
     };
-    const close = () => content.emit("close");
+    const close = () =>content.emit("close") ;
     return { createRoom, createRoomId, close };
   },
 };
@@ -84,7 +87,7 @@ export default {
   h2 {
     font-size: 36px;
   }
-  &__title {
+  &__title{
     width: calc(80% + 16px);
     font-size: 16px;
     line-height: 1.5;
@@ -98,8 +101,8 @@ export default {
     border: 4px solid #000;
     text-align: center;
     background-color: #ddd;
-    @include pad {
-      font-size: 16px;
+    @include pad{
+        font-size: 16px;
     }
     &:focus {
       outline: none;

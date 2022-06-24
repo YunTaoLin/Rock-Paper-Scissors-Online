@@ -4,9 +4,8 @@
       <div class="close" @click="close">X</div>
       <div class="joinRoom">
         <h2 class="mb_16">加入房間</h2>
-        <div class="createRoom__title">請輸入房間ID：</div>
-        <input type="phone" placeholder="Join Room ID" v-model="joinRoomId" />
-        <div class="btn mt_16 mb_12" @click="joinRoom">加入 Join</div>
+        <input type="phone" placeholder="請輸入房間ID" v-model="joinRoomId" />
+        <div class="btn mt_16 mb_12" @click="joinRoom">加入</div>
       </div>
     </div>
   </div>
@@ -25,6 +24,7 @@ export default {
     const joinRoomId = ref(null);
     const db = firebase.database();
     const joinRoom = () => {
+      if(!joinRoomId.value) return alert('請輸入房號')
       const theRef = db.ref(`/room/${joinRoomId.value}`);
       theRef.once("value").then((snapshot) => {
         const data = snapshot.val();
@@ -55,7 +55,7 @@ export default {
                 lastConnect: moment(new Date()).format("YYYY/MM/DD hh:mm"),
               });
             }, 60000);
-            router.push("/gameRoom");
+            router.push("/zh-tw/gameRoom");
           });
       });
     };

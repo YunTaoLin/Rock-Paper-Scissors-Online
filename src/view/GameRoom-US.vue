@@ -1,6 +1,6 @@
 <template>
   <div class="wrap">
-    <div class="roomId">房號：{{ roomId }}</div>
+    <div class="roomId">Room ID：{{ roomId }}</div>
     <div class="container">
       <div class="player self">
         <div class="box">
@@ -12,15 +12,13 @@
             <figure>
               <img :src="selected.img" alt="" />
               <figcaption>
-                {{ selected.name }} <span>{{ selected.en }}</span>
+                {{ selected.en }}
               </figcaption>
             </figure>
           </div>
           <div v-else>?</div>
         </div>
-        <h2>
-          自己
-        </h2>
+        <h2>You</h2>
       </div>
       <div class="vs">VS</div>
       <div class="player other">
@@ -34,16 +32,17 @@
               <img :src="opponentSelected.img" alt="" />
               <figcaption>
                 {{ opponentSelected.name }}
+                <span>{{ opponentSelected.en }}</span>
               </figcaption>
             </figure>
           </div>
           <div v-else>?</div>
         </div>
-        <h2>對手</h2>
+        <h2>Opponent</h2>
       </div>
     </div>
     <div class="select" v-if="!result">
-      <div class="select_title">選擇出拳</div>
+      <div class="select_title">Choose</div>
       <div class="group">
         <div
           class="selectItem"
@@ -55,7 +54,7 @@
           <figure>
             <img :src="item.img" alt="" />
             <figcaption>
-              {{ item.name }}
+              {{ item.en }}
             </figcaption>
           </figure>
         </div>
@@ -63,12 +62,12 @@
     </div>
     <div class="result" v-else>
       <div class="result_title">{{ result }}</div>
-      <div class="refreshBtn" @click="again()">再來一次！</div>
+      <div class="refreshBtn" @click="again()">Play Again！</div>
     </div>
     <!-- //撐高底部 -->
     <div class="space"></div>
-    <div class="loading" v-show="!startGame">等待對手加入中...</div>
-    <div class="loading" v-show="waiting">等待對手出拳...</div>
+    <div class="loading" v-show="!startGame">Waiting Opponent Join...</div>
+    <div class="loading" v-show="waiting">Waiting Opponent Choose...</div>
   </div>
 </template>
 
@@ -110,9 +109,9 @@ export default {
     const startGame = ref(false);
     const waiting = ref(false);
     const result = ref("");
-    const myEnum = ["你贏了", "你輸了", "平手"];
+    const myEnum = ["Win", "Lose", "Draw"];
     if (!store.state.linkedRoom) {
-      router.replace("/zh-tw");
+      router.replace("/en-us");
     }
     const resultHandler = () => {
       let mySelect = selected.name;
@@ -403,10 +402,10 @@ export default {
     align-items: center;
     border: 4px solid #000;
     margin: 12px 0;
-    padding:4px 12px;
     border-radius: 600px;
     font-size: 20px;
     font-weight: 700;
+    padding:4px 12px;
     cursor: pointer;
     background-color: rgb(236, 205, 102);
     transition: 0.2s;

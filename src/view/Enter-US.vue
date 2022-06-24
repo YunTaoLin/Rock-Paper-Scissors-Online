@@ -1,17 +1,18 @@
 <template>
   <div id="EnterPage">
-    <h1>線上猜拳</h1>
+    <h1>
+      Paper Scissors Rock<br class="hidden-pad-up" />
+    </h1>
     <div class="btn_group">
       <div class="btn" @click="openCreateRoom = true">
-        <div>創建房間+</div>
-        <div class="btn--secondaryTitle"></div>
+        <div>Create Room +</div>
       </div>
       <div class="btn" @click="openJoinRoom = true">
-        <div>加入房間</div>
-        <div class="btn--secondaryTitle"></div>
+        <div>Join Room</div>
       </div>
     </div>
     <div class="footer">
+
     </div>
     <CreateRoom v-if="openCreateRoom" @close="openCreateRoom = false" />
     <JoinRoom v-if="openJoinRoom" @close="openJoinRoom = false" />
@@ -19,8 +20,8 @@
 </template>
 
 <script lang="ts">
-import CreateRoom from "@/components/createRoom.vue";
-import JoinRoom from "@/components/joinRoom.vue";
+import CreateRoom from "@/components/createRoom-US.vue";
+import JoinRoom from "@/components/joinRoom-US.vue";
 import { inject, reactive, ref } from "vue";
 export default {
   components: { CreateRoom, JoinRoom },
@@ -71,7 +72,7 @@ export default {
       border: 8px solid #000;
       margin: 24px;
       border-radius: 600px;
-      font-size: 60px;
+      font-size: 48px;
       cursor: pointer;
       background-color: rgb(243, 210, 101);
       transition: 0.2s;

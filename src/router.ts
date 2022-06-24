@@ -1,28 +1,54 @@
-import { createRouter, createWebHashHistory } from "vue-router";
+import { createRouter, createWebHashHistory, createWebHistory } from "vue-router";
 
+import Index from "./view/Index.vue";
 import Enter from "./view/Enter.vue";
 import GameRoom from "./view/GameRoom.vue";
-
+import Enter_US from "./view/Enter-US.vue";
+import GameRoom_US from "./view/GameRoom-US.vue";
 const routes = [
   {
-    path: "/gameRoom",
-    name: "Gameroom",
-    component: GameRoom,
+    path: "/",
+    name: "Index",
+    component: Index,
   },
   {
-    path: "/",
+    path: "/zh-tw",
     name: "Enter",
     component: Enter,
   },
   {
-    path: "/:pathMatch(.*)*",
-    redirect: { path: "/" },
+    path: "/zh-tw/gameRoom",
+    name: "Gameroom",
+    component: GameRoom,
   },
+  // {
+  //   path: "/zh-tw/:pathMatch(.*)*",
+  //   redirect: { path: "/zh-tw/" },
+  // },
+  {
+    path: "/en-us",
+    name: "EnterUS",
+    component: Enter_US,
+  },
+
+  {
+    path: "/en-us/gameRoom",
+    name: "GameroomUS",
+    component: GameRoom_US,
+  },
+  // {
+  //   path: "/en-us/:pathMatch(.*)*",
+  //   redirect: { path: "/en-us/" },
+  // },
+  // {
+  //   path: "/:pathMatch(.*)*",
+  //   redirect: { path: "/" },
+  // },
 ];
 
-const router = createRouter({
-  history: createWebHashHistory("/Paper-Scissors-Rock-Online/dist"),
-  routes,
-});
+// const router = createRouter({
+//   history: createWebHashHistory("/Paper-Scissors-Rock-Online/dist"),
+//   routes,
+// });
 
-export default router;
+export default routes;

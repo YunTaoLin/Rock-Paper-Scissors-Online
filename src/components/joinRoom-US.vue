@@ -2,10 +2,10 @@
   <div class="overlay">
     <div class="popup">
       <div class="close" @click="close">X</div>
-      <div class="createRoom">
-        <h2 class="mb_16">創建房間</h2>
-        <input type="phone" placeholder="請自訂房間ID" v-model="createRoomId" />
-        <div class="btn mt_16 mb_12" @click="createRoom">創建</div>
+      <div class="joinRoom">
+        <h2 class="mb_16">Join Room</h2>
+        <input type="phone" placeholder="Join Room ID" v-model="joinRoomId" />
+        <div class="btn mt_16 mb_12" @click="joinRoom">Go!</div>
       </div>
     </div>
   </div>
@@ -15,66 +15,59 @@
 import firebase from "firebase/app";
 import { ref } from "vue";
 import { useRouter } from "vue-router";
-import moment from "moment";
+import moment, { now } from "moment";
 import { useStore } from "vuex";
 export default {
   setup(props: any, content: any) {
     const store = useStore();
     const router = useRouter();
-    const createRoomId = ref(null);
+    const joinRoomId = ref(null);
     const db = firebase.database();
-    const createRoom = () => {
-      if (!createRoomId.value) return alert("請輸入房號");
-
-      //先查找是否有該房間
-      const theRef = db.ref(`/room/${createRoomId.value}`);
-      theRef.once("value").then(function (snapshot) {
-        if (snapshot.val()) {
-          const playA_status = moment(
-            snapshot.val().play_A.lastConnect
-          ).isAfter(moment().add(-2, "m"));
-          const playB_status = moment(
-            snapshot.val().play_B.lastConnect
-          ).isAfter(moment().add(-2, "m"));
-          if (playA_status && playB_status) {
-            return alert("已經存在該房間囉，請換一個房號");
-          }
+    const joinRoom = () => {
+      if(!joinRoomId.value) return alert('input room id pleace!')
+      const theRef = db.ref(`/room/${joinRoomId.value}`);
+      theRef.once("value").then((snapshot) => {
+        const data = snapshot.val();
+        if (!data) return alert("This room doesn't exist");
+        //B未加入，或是B離線
+        if (
+          !data.play_B.lastConnect ||
+          moment(data.play_B.lastConnect).isBefore(moment().add(-2, "m"))
+        ) {
+          store.commit("setRole", "play_B");
+        } else if (
+          !data.play_A.lastConnect ||
+          moment(data.play_A.lastConnect).isBefore(moment().add(-2, "m"))
+        ) {
+          store.commit("setRole", "play_A");
+        } else {
+          return alert("The room is full");
         }
-        theRef
-          .set({
-            play_A: {
-              join: true,
-              select: null,
-              lastConnect: moment(new Date()).format("YYYY/MM/DD hh:mm"),
-            },
-            play_B: {
-              join: false,
-              select: null,
-              lastConnect: null,
-            },
+        store.commit("setLinkedRoom", joinRoomId.value);
+        db.ref(`/room/${joinRoomId.value}/${store.state.role}`)
+          .update({
+            lastConnect: moment(new Date()).format("YYYY/MM/DD hh:mm"),
+            join: true,
           })
           .then(() => {
-            store.commit("setLinkedRoom", createRoomId.value);
-            store.commit("setRole", "play_A");
-            //設定定時器，每一分鐘告訴db，連線還存在
             setInterval(() => {
-              db.ref(`/room/${createRoomId.value}/play_A`).update({
+              db.ref(`/room/${joinRoomId.value}/${store.state.role}`).update({
                 lastConnect: moment(new Date()).format("YYYY/MM/DD hh:mm"),
               });
             }, 60000);
-            router.push("/zh-tw/gameRoom");
+            router.push("/en-us/gameRoom");
           });
       });
     };
     const close = () => content.emit("close");
-    return { createRoom, createRoomId, close };
+    return { joinRoom, joinRoomId, close };
   },
 };
 </script>
 
 <style lang="scss">
 @import "@/scss/main.scss";
-.createRoom {
+.joinRoom {
   display: flex;
   flex-direction: column;
   justify-content: center;

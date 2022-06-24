@@ -1,35 +1,16 @@
 <template>
   <div id="EnterPage">
-    <h1>線上猜拳</h1>
+    <h1>Paper Scissors Rock<br class="hidden-pad-up" />線上猜拳</h1>
     <div class="btn_group">
-      <div class="btn" @click="openCreateRoom = true">
-        <div>創建房間+</div>
-        <div class="btn--secondaryTitle"></div>
-      </div>
-      <div class="btn" @click="openJoinRoom = true">
-        <div>加入房間</div>
-        <div class="btn--secondaryTitle"></div>
-      </div>
+      <router-link to="/en-us" class="btn"> English </router-link>
+      <router-link to="/zh-tw" class="btn"> 中文 </router-link>
     </div>
-    <div class="footer">
-    </div>
-    <CreateRoom v-if="openCreateRoom" @close="openCreateRoom = false" />
-    <JoinRoom v-if="openJoinRoom" @close="openJoinRoom = false" />
+    <div class="footer"></div>
   </div>
 </template>
 
 <script lang="ts">
-import CreateRoom from "@/components/createRoom.vue";
-import JoinRoom from "@/components/joinRoom.vue";
-import { inject, reactive, ref } from "vue";
 export default {
-  components: { CreateRoom, JoinRoom },
-  setup() {
-    const openCreateRoom = ref(false);
-    const openJoinRoom = ref(false);
-
-    return { openCreateRoom, openJoinRoom };
-  },
 };
 </script>
 
@@ -62,7 +43,7 @@ export default {
     flex-direction: column;
     .btn {
       width: 36vw;
-      min-height: 150px;
+      min-height:150px;
       padding: 24px;
       display: flex;
       flex-direction: column;
@@ -84,7 +65,7 @@ export default {
         width: 70vw;
         padding: 12px;
         border: 6px solid #000;
-        min-height: 40px;
+        min-height:40px;
       }
       &:hover {
         transform: scale(1.1);
