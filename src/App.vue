@@ -6,8 +6,8 @@
 
 <script lang="ts">
 import firebaseConfig from "./firebase/firebase.json";
-import firebase from "firebase/app";
-import "firebase/database";
+import firebase from "firebase/compat/app";
+// import "firebase/compat/database";
 import { ref } from "@vue/reactivity";
 
 export default {

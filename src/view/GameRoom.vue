@@ -75,7 +75,7 @@
 <script lang="ts">
 import { useStore } from "vuex";
 import { useRouter } from "vue-router";
-import firebase from "firebase/app";
+import firebase from "firebase/compat/app";
 import img_scissors from "../assets/剪刀.png";
 import img_stone from "../assets/石頭.png";
 import img_paper from "../assets/布.png";

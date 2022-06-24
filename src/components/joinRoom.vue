@@ -12,7 +12,7 @@
 </template>
 
 <script lang="ts">
-import firebase from "firebase/app";
+import firebase from "firebase/compat/app";
 import { ref } from "vue";
 import { useRouter } from "vue-router";
 import moment, { now } from "moment";

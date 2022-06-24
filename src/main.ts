@@ -4,10 +4,10 @@ import App from "./App.vue";
 import store from "./store";
 import routes from "./router";
 
-import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
+// import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
 
 // const app = createApp(App)
-console.log("routes", routes);
+// console.log("routes", routes);
 export const createApp = ViteSSG(
   App,
   // vue-router options
@@ -15,6 +15,7 @@ export const createApp = ViteSSG(
   // function to have custom setups
   ({ app, router, routes, isClient, initialState }) => {
     // install plugins etc.
+    Object.values(import.meta.globEager('./modules/*.ts')).map(i => i.install?.(app))
     app.use(store);
     if (import.meta.env.MODE == "local" || import.meta.env.MODE == "dev") {
       app.config.performance = true;
@@ -22,8 +23,9 @@ export const createApp = ViteSSG(
     } else {
       app.config.performance = false;
     }
+    Object.values(import.meta.globEager('./modules/*.ts')).map(i => i.install?.(app))
   }
 );
 
-// app.use(routes).use(store).mount("#app");
-serviceWorkerRegistration.register();
+// app.use(router).use(store).mount("#app");
+// serviceWorkerRegistration.register();

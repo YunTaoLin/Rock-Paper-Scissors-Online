@@ -1,8 +1,8 @@
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
-const PrerenderSPAPlugin = require("prerender-spa-plugin");
+// const PrerenderSPAPlugin = require("prerender-spa-plugin");
 const path = require("path");
-const Renderer = PrerenderSPAPlugin.PuppeteerRenderer;
+// const Renderer = PrerenderSPAPlugin.PuppeteerRenderer;
 // https://vitejs.dev/config/
 export default defineConfig({
   resolve: {
@@ -23,31 +23,30 @@ export default defineConfig({
       },
     },
   },
-  // build: {
-  //   outDir: "dist",
-  //   assetsDir: "assets",
-  //   assetsInlineLimit: 4096,
-  //   cssCodeSplit: true,
-  //   sourcemap: false,
-  //   manifest: false,
-  // },
+  build: {
+    outDir: "dist",
+    assetsDir: "assets",
+    assetsInlineLimit: 4096,
+    cssCodeSplit: true,
+    sourcemap: false,
+    manifest: false,
+  },
   base: "/Rock-Paper-Scissors-Online/",
   plugins: [
-    new PrerenderSPAPlugin({
-      staticDir: path.join(__dirname, "dist"),
-      routes: ["/", "/zh-tw", "/en-us"],
-      renderer: new Renderer({
-        inject: {
-          foo: "bar",
-        },
-        headless: true,
-        renderAfterDocumentEvent: "render-event",
-      }),
-    }),
+    // new PrerenderSPAPlugin({
+    //   staticDir: path.join(__dirname, "dist"),
+    //   routes: ["/", "/zh-tw", "/en-us"],
+    //   renderer: new Renderer({
+    //     inject: {
+    //       foo: "bar",
+    //     },
+    //     headless: true,
+    //     renderAfterDocumentEvent: "render-event",
+    //   }),
+    // }),
     vue(),
   ],
   // ssgOptions: {
   //   format: 'cjs'
   // },
 });
-
