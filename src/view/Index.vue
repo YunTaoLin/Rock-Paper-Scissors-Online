@@ -1,6 +1,6 @@
 <template>
   <div id="EnterPage">
-    <h1>Paper Scissors Rock<br class="hidden-pad-up" />線上猜拳</h1>
+    <h1>Rock Paper Scissors<br class="hidden-pad-up" />線上猜拳</h1>
     <div class="btn_group">
       <router-link to="/en-us" class="btn"> English </router-link>
       <router-link to="/zh-tw" class="btn"> 中文 </router-link>

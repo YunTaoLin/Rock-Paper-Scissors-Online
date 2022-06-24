@@ -24,14 +24,14 @@ export default defineConfig({
     },
   },
   build: {
-    outDir: "doc",
+    outDir: "docs",
     assetsDir: "assets",
     assetsInlineLimit: 4096,
     cssCodeSplit: true,
     sourcemap: false,
     manifest: false,
   },
-  base: "/Rock-Paper-Scissors-Online/doc",
+  base: "/Rock-Paper-Scissors-Online/",
   plugins: [
     // new PrerenderSPAPlugin({
     //   staticDir: path.join(__dirname, "dist"),

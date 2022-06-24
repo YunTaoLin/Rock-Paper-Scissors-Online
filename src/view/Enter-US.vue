@@ -1,7 +1,7 @@
 <template>
   <div id="EnterPage">
     <h1>
-      Paper Scissors Rock<br class="hidden-pad-up" />
+      Rock Paper Scissors<br class="hidden-pad-up" />
     </h1>
     <div class="btn_group">
       <div class="btn" @click="openCreateRoom = true">
