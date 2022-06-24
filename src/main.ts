@@ -11,7 +11,7 @@ import routes from "./router";
 export const createApp = ViteSSG(
   App,
   // vue-router options
-  { routes, base: "/" },
+  { routes, base: "/Rock-Paper-Scissors-Online/" },
   // function to have custom setups
   ({ app, router, routes, isClient, initialState }) => {
     // install plugins etc.
