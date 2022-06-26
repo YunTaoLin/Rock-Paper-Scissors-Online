@@ -9,10 +9,35 @@ import firebaseConfig from "./firebase/firebase.json";
 import firebase from "firebase/compat/app";
 import "firebase/compat/database";
 import { ref } from "@vue/reactivity";
+import { useHead } from '@vueuse/head';
 export default {
   setup() {
+    useHead({
+      title: "Rock Paper Scissors Online 線上猜拳",
+      meta: [
+        {
+          name: `og:title`,
+          content: `Rock Paper Scissors Online 線上猜拳`,
+        },
+        {
+          name: `og:description`,
+          content: `Free real-time game of Rock Paper Scissors, you can create an independent room to play games remotely.免費線上即時猜拳，可創建獨立房號和朋友遠端進行猜拳遊戲。`,
+        },
+        {
+          name: `description`,
+          content: `Free real-time game of Rock Paper Scissors, you can create an independent room to play games remotely.線上即時猜拳，可創建獨立房號和朋友遠端進行猜拳遊戲。`,
+        },
+        {
+          name: `twitter:title`,
+          content: `Rock Paper Scissors Online 線上猜拳`,
+        },
+        {
+          name: `twitter:description`,
+          content: `Free real-time game of Rock Paper Scissors, you can create an independent room to play games remotely.線上即時猜拳，可創建獨立房號和朋友遠端進行猜拳遊戲。`,
+        },
+      ],
+    });
     let firebaseAPP = firebase.initializeApp(firebaseConfig);
-    
     let appHeihgt = document.documentElement.clientHeight;
     let isSafari = ref(false);
     let mainHeihgt = document.documentElement.clientHeight;

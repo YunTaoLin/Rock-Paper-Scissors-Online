@@ -40,10 +40,10 @@ const routes = [
   //   path: "/en-us/:pathMatch(.*)*",
   //   redirect: { path: "/en-us/" },
   // },
-  // {
-  //   path: "/:pathMatch(.*)*",
-  //   redirect: { path: "/" },
-  // },
+  {
+    path: "/:pathMatch(.*)*",
+    redirect: { path: "/" },
+  },
 ];
 
 // const router = createRouter({

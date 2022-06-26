@@ -23,9 +23,35 @@
 import CreateRoom from "@/components/createRoom-US.vue";
 import JoinRoom from "@/components/joinRoom-US.vue";
 import { inject, reactive, ref } from "vue";
+import { useHead } from '@vueuse/head';
 export default {
   components: { CreateRoom, JoinRoom },
   setup() {
+    useHead({
+      title: "Rock Paper Scissors Online",
+      meta: [
+        {
+          name: `og:title`,
+          content: `Rock Paper Scissors Online`,
+        },
+        {
+          name: `og:description`,
+          content: `Free real-time game of Rock Paper Scissors, you can create an independent room to play games remotely.`,
+        },
+        {
+          name: `description`,
+          content: `Free real-time game of Rock Paper Scissors, you can create an independent room to play games remotely.`,
+        },
+        {
+          name: `twitter:title`,
+          content: `Rock Paper Scissors Online`,
+        },
+        {
+          name: `twitter:description`,
+          content: `Free real-time game of Rock Paper Scissors, you can create an independent room to play games remotely.`,
+        },
+      ],
+    });
     const openCreateRoom = ref(false);
     const openJoinRoom = ref(false);
 

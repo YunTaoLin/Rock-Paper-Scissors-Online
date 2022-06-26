@@ -11,8 +11,7 @@
         <div class="btn--secondaryTitle"></div>
       </div>
     </div>
-    <div class="footer">
-    </div>
+    <div class="footer"></div>
     <CreateRoom v-if="openCreateRoom" @close="openCreateRoom = false" />
     <JoinRoom v-if="openJoinRoom" @close="openJoinRoom = false" />
   </div>
@@ -22,9 +21,35 @@
 import CreateRoom from "@/components/createRoom.vue";
 import JoinRoom from "@/components/joinRoom.vue";
 import { inject, reactive, ref } from "vue";
+import { useHead } from "@vueuse/head";
 export default {
   components: { CreateRoom, JoinRoom },
   setup() {
+    useHead({
+      title: "線上猜拳 - 剪刀石頭布",
+      meta: [
+        {
+          name: `og:title`,
+          content: `線上猜拳 - 剪刀石頭布`,
+        },
+        {
+          name: `og:description`,
+          content: `免費線上即時猜拳，可創建獨立房號和朋友遠端進行猜拳遊戲。`,
+        },
+        {
+          name: `description`,
+          content: `線上即時猜拳，可創建獨立房號和朋友遠端進行猜拳遊戲。`,
+        },
+        {
+          name: `twitter:title`,
+          content: `線上猜拳 - 剪刀石頭布`,
+        },
+        {
+          name: `twitter:description`,
+          content: `線上即時猜拳，可創建獨立房號和朋友遠端進行猜拳遊戲。`,
+        },
+      ],
+    });
     const openCreateRoom = ref(false);
     const openJoinRoom = ref(false);
 

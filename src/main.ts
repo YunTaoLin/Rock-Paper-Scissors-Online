@@ -10,11 +10,8 @@ import routes from "./router";
 // console.log("routes", routes);
 export const createApp = ViteSSG(
   App,
-  // vue-router options
   { routes, base: "/Rock-Paper-Scissors-Online/" },
-  // function to have custom setups
   ({ app, router, routes, isClient, initialState }) => {
-    // install plugins etc.
     Object.values(import.meta.globEager('./modules/*.ts')).map(i => i.install?.(app))
     app.use(store);
     if (import.meta.env.MODE == "local" || import.meta.env.MODE == "dev") {
