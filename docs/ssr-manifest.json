@@ -104,6 +104,16 @@
     "/Rock-Paper-Scissors-Online/assets/石頭.401cfcbe.png",
     "/Rock-Paper-Scissors-Online/assets/布.2b9332b0.png"
   ],
+  "node_modules/@firebase/database/dist/index.esm2017.js": [
+    "/Rock-Paper-Scissors-Online/assets/剪刀.3781ad54.png",
+    "/Rock-Paper-Scissors-Online/assets/石頭.401cfcbe.png",
+    "/Rock-Paper-Scissors-Online/assets/布.2b9332b0.png"
+  ],
+  "node_modules/@firebase/database-compat/dist/index.esm2017.js": [
+    "/Rock-Paper-Scissors-Online/assets/剪刀.3781ad54.png",
+    "/Rock-Paper-Scissors-Online/assets/石頭.401cfcbe.png",
+    "/Rock-Paper-Scissors-Online/assets/布.2b9332b0.png"
+  ],
   "src/App.vue?vue&type=style&index=0&lang.scss": [
     "/Rock-Paper-Scissors-Online/assets/剪刀.3781ad54.png",
     "/Rock-Paper-Scissors-Online/assets/石頭.401cfcbe.png",

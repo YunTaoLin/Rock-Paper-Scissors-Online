@@ -7,12 +7,12 @@
 <script lang="ts">
 import firebaseConfig from "./firebase/firebase.json";
 import firebase from "firebase/compat/app";
-// import "firebase/compat/database";
+import "firebase/compat/database";
 import { ref } from "@vue/reactivity";
-
 export default {
   setup() {
-    firebase.initializeApp(firebaseConfig);
+    let firebaseAPP = firebase.initializeApp(firebaseConfig);
+    
     let appHeihgt = document.documentElement.clientHeight;
     let isSafari = ref(false);
     let mainHeihgt = document.documentElement.clientHeight;

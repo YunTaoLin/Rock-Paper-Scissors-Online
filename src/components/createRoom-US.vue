@@ -22,13 +22,13 @@ import { useRouter } from "vue-router";
 import moment from "moment";
 import { useStore } from "vuex";
 export default {
-  setup(props:any, content:any) {
+  setup(props: any, content: any) {
     const store = useStore();
     const router = useRouter();
     const createRoomId = ref(null);
     const db = firebase.database();
     const createRoom = () => {
-      if(!createRoomId.value) return alert('input room id pleace!')
+      if (!createRoomId.value) return alert("input room id pleace!");
       //先查找是否有該房間
       const theRef = db.ref(`/room/${createRoomId.value}`);
       theRef.once("value").then(function (snapshot) {
@@ -62,14 +62,14 @@ export default {
             //設定定時器，每一分鐘告訴db，連線還存在
             setInterval(() => {
               db.ref(`/room/${createRoomId.value}/play_A`).update({
-                lastConnect: moment(new Date()).format("YYYY/MM/DD hh:mm")
+                lastConnect: moment(new Date()).format("YYYY/MM/DD hh:mm"),
               });
             }, 60000);
             router.push("/en-us/gameRoom");
           });
       });
     };
-    const close = () =>content.emit("close") ;
+    const close = () => content.emit("close");
     return { createRoom, createRoomId, close };
   },
 };
@@ -87,7 +87,7 @@ export default {
   h2 {
     font-size: 36px;
   }
-  &__title{
+  &__title {
     width: calc(80% + 16px);
     font-size: 16px;
     line-height: 1.5;
@@ -101,8 +101,8 @@ export default {
     border: 4px solid #000;
     text-align: center;
     background-color: #ddd;
-    @include pad{
-        font-size: 16px;
+    @include pad {
+      font-size: 16px;
     }
     &:focus {
       outline: none;
