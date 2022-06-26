@@ -32,13 +32,14 @@ export default {
       //先查找是否有該房間
       const theRef = db.ref(`/room/${createRoomId.value}`);
       theRef.once("value").then(function (snapshot) {
+        console.log('XXX',snapshot)
         if (snapshot.val()) {
           const playA_status = moment(
             snapshot.val().play_A.lastConnect
-          ).isAfter(moment().add(-2, "m"));
+          ).isAfter(moment().add(-2, "m").format("YYYY/MM/DD hh:mm"));
           const playB_status = moment(
             snapshot.val().play_B.lastConnect
-          ).isAfter(moment().add(-2, "m"));
+          ).isAfter(moment().add(-2, "m").format("YYYY/MM/DD hh:mm"));
           if (playA_status && playB_status) {
             return alert("This room already exists, please change the room id");
           }

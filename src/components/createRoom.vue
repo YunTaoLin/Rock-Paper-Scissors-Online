@@ -32,10 +32,10 @@ export default {
         if (snapshot.val()) {
           const playA_status = moment(
             snapshot.val().play_A.lastConnect
-          ).isAfter(moment().add(-2, "m"));
+          ).isAfter(moment().add(-2, "m").format("YYYY/MM/DD hh:mm"));
           const playB_status = moment(
             snapshot.val().play_B.lastConnect
-          ).isAfter(moment().add(-2, "m"));
+          ).isAfter(moment().add(-2, "m").format("YYYY/MM/DD hh:mm"));
           if (playA_status && playB_status) {
             return alert("已經存在該房間囉，請換一個房號");
           }

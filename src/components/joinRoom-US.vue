@@ -32,12 +32,12 @@ export default {
         //B未加入，或是B離線
         if (
           !data.play_B.lastConnect ||
-          moment(data.play_B.lastConnect).isBefore(moment().add(-2, "m"))
+          moment(data.play_B.lastConnect).isBefore(moment().add(-2, "m").format("YYYY/MM/DD hh:mm"))
         ) {
           store.commit("setRole", "play_B");
         } else if (
           !data.play_A.lastConnect ||
-          moment(data.play_A.lastConnect).isBefore(moment().add(-2, "m"))
+          moment(data.play_A.lastConnect).isBefore(moment().add(-2, "m").format("YYYY/MM/DD hh:mm"))
         ) {
           store.commit("setRole", "play_A");
         } else {
