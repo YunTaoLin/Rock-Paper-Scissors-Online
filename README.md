@@ -5,4 +5,6 @@
 
 核心技術：Vue 3 + Typescript + Vite + WebSocket
 
-使用Firebase的Realtime Database
+✌️✊🖐️ ✌️✊🖐️ ✌️✊🖐️ ✌️✊🖐️ ✌️✊🖐️
+免費線上即時猜拳遊戲，可創建獨立房號和朋友遠端進行線上即時猜拳，完全免費。<br>
+Free real-time game of Rock Paper Scissors, you can create an independent room to play games remotely.
