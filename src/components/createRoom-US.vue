@@ -3,7 +3,7 @@
     <div class="popup">
       <div class="close" @click="close">X</div>
       <div class="createRoom">
-        <h2 class="mb_16">Create Room</h2>
+        <strong class="mb_16">Create Room</strong>
         <input
           type="phone"
           placeholder="Create Room ID"
@@ -85,7 +85,7 @@ export default {
   align-items: center;
   width: 100%;
   height: 100%;
-  h2 {
+  strong {
     font-size: 36px;
   }
   &__title {

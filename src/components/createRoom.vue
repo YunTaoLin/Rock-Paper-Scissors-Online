@@ -3,7 +3,7 @@
     <div class="popup">
       <div class="close" @click="close">X</div>
       <div class="createRoom">
-        <h2 class="mb_16">創建房間</h2>
+        <strong class="mb_16">創建房間</strong>
         <input type="phone" placeholder="請自訂房間ID" v-model="createRoomId" />
         <div class="btn mt_16 mb_12" @click="createRoom">創建</div>
       </div>
@@ -81,7 +81,7 @@ export default {
   align-items: center;
   width: 100%;
   height: 100%;
-  h2 {
+  strong {
     font-size: 36px;
   }
   &__title {

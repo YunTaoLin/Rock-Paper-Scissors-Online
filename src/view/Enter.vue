@@ -1,7 +1,7 @@
 <template>
-  <div id="EnterPage">
+  <header id="EnterPage">
     <h1>線上猜拳</h1>
-    <div class="btn_group">
+    <nav class="btn_group">
       <div class="btn" @click="openCreateRoom = true">
         <div>創建房間+</div>
         <div class="btn--secondaryTitle"></div>
@@ -10,11 +10,11 @@
         <div>加入房間</div>
         <div class="btn--secondaryTitle"></div>
       </div>
-    </div>
-    <div class="footer"></div>
+    </nav>
+    <div class="other"></div>
     <CreateRoom v-if="openCreateRoom" @close="openCreateRoom = false" />
     <JoinRoom v-if="openJoinRoom" @close="openJoinRoom = false" />
-  </div>
+  </header>
 </template>
 
 <script lang="ts">
@@ -34,11 +34,11 @@ export default {
         },
         {
           name: `og:description`,
-          content: `免費線上即時猜拳，可創建獨立房號和朋友遠端進行猜拳遊戲。`,
+          content: `免費線上即時猜拳遊戲，可創建獨立房號和朋友遠端進行線上即時猜拳，完全免費。`,
         },
         {
           name: `description`,
-          content: `線上即時猜拳，可創建獨立房號和朋友遠端進行猜拳遊戲。`,
+          content: `免費線上即時猜拳遊戲，可創建獨立房號和朋友遠端進行線上即時猜拳，完全免費。`,
         },
         {
           name: `twitter:title`,
@@ -46,7 +46,7 @@ export default {
         },
         {
           name: `twitter:description`,
-          content: `線上即時猜拳，可創建獨立房號和朋友遠端進行猜拳遊戲。`,
+          content: `免費線上即時猜拳遊戲，可創建獨立房號和朋友遠端進行線上即時猜拳，完全免費。`,
         },
       ],
     });
@@ -124,7 +124,7 @@ export default {
       }
     }
   }
-  .footer {
+  .other {
     height: 200px;
     padding-top: 40px;
     box-sizing: border-box;

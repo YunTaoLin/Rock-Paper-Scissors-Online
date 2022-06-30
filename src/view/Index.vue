@@ -1,16 +1,56 @@
 <template>
   <div id="EnterPage">
     <h1>Rock Paper Scissors<br class="hidden-pad-up" />線上猜拳</h1>
-    <div class="btn_group">
-      <router-link to="/en-us" class="btn"> English </router-link>
-      <router-link to="/zh-tw" class="btn"> 中文 </router-link>
-    </div>
-    <div class="footer"></div>
+    <nav class="btn_group">
+      <a
+        title="play game with english"
+        href="https://yuntaolin.github.io/Rock-Paper-Scissors-Online/en-us"
+        class="btn"
+      >
+        English
+      </a>
+      <a
+        title="以中文進行遊戲"
+        href="https://yuntaolin.github.io/Rock-Paper-Scissors-Online/zh-tw"
+        class="btn"
+      >
+        中文
+      </a>
+    </nav>
+    <div class="other"></div>
   </div>
 </template>
 
 <script lang="ts">
+import { useHead } from "@vueuse/head";
 export default {
+  setup() {
+    useHead({
+      title: "Rock Paper Scissors Online 線上猜拳",
+      meta: [
+        {
+          name: `og:title`,
+          content: `Rock Paper Scissors Online 線上猜拳`,
+        },
+        {
+          name: `og:description`,
+          content: `Free real-time game of Rock Paper Scissors, you can create an independent room to play games remotely.免費線上即時猜拳遊戲，可創建獨立房號和朋友遠端進行線上即時猜拳，完全免費。`,
+        },
+        {
+          name: `description`,
+          content: `Free real-time game of Rock Paper Scissors, you can create an independent room to play games remotely.免費線上即時猜拳遊戲，可創建獨立房號和朋友遠端進行線上即時猜拳，完全免費。`,
+        },
+        {
+          name: `twitter:title`,
+          content: `Rock Paper Scissors Online 線上猜拳`,
+        },
+        {
+          name: `twitter:description`,
+          content: `Free real-time game of Rock Paper Scissors, you can create an independent room to play games remotely.免費線上即時猜拳遊戲，可創建獨立房號和朋友遠端進行線上即時猜拳，完全免費。`,
+        },
+      ],
+    });
+  },
 };
 </script>
 
@@ -43,7 +83,7 @@ export default {
     flex-direction: column;
     .btn {
       width: 36vw;
-      min-height:150px;
+      min-height: 150px;
       padding: 24px;
       display: flex;
       flex-direction: column;
@@ -65,7 +105,7 @@ export default {
         width: 70vw;
         padding: 12px;
         border: 6px solid #000;
-        min-height:40px;
+        min-height: 40px;
       }
       &:hover {
         transform: scale(1.1);
@@ -80,7 +120,7 @@ export default {
       }
     }
   }
-  .footer {
+  .other {
     height: 200px;
     padding-top: 40px;
     box-sizing: border-box;

@@ -1,19 +1,16 @@
 <template>
   <div id="EnterPage">
-    <h1>
-      Rock Paper Scissors<br class="hidden-pad-up" />
-    </h1>
-    <div class="btn_group">
+    <h1>Rock Paper Scissors Online<br class="hidden-pad-up" /></h1>
+    <nav class="btn_group">
       <div class="btn" @click="openCreateRoom = true">
         <div>Create Room +</div>
       </div>
       <div class="btn" @click="openJoinRoom = true">
         <div>Join Room</div>
       </div>
-    </div>
-    <div class="footer">
+    </nav>
+    <div class="other"></div>
 
-    </div>
     <CreateRoom v-if="openCreateRoom" @close="openCreateRoom = false" />
     <JoinRoom v-if="openJoinRoom" @close="openJoinRoom = false" />
   </div>
@@ -23,7 +20,7 @@
 import CreateRoom from "@/components/createRoom-US.vue";
 import JoinRoom from "@/components/joinRoom-US.vue";
 import { inject, reactive, ref } from "vue";
-import { useHead } from '@vueuse/head';
+import { useHead } from "@vueuse/head";
 export default {
   components: { CreateRoom, JoinRoom },
   setup() {
@@ -126,7 +123,7 @@ export default {
       }
     }
   }
-  .footer {
+  .other {
     height: 200px;
     padding-top: 40px;
     box-sizing: border-box;

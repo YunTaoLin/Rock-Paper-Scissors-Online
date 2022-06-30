@@ -373,9 +373,10 @@ export default {
   justify-content: center;
   align-items: center;
   backdrop-filter: blur(6px);
-  font-size: 72px;
+  font-size: 68px;
   font-weight: 700;
   white-space: 2px;
+  text-align: center;
   @include pad {
     font-size: 44px;
     background-color: rgba(252, 252, 252, 0.9);

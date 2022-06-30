@@ -3,7 +3,7 @@
     <div class="popup">
       <div class="close" @click="close">X</div>
       <div class="joinRoom">
-        <h2 class="mb_16">Join Room</h2>
+        <strong class="mb_16">Join Room</strong>
         <input type="phone" placeholder="Join Room ID" v-model="joinRoomId" />
         <div class="btn mt_16 mb_12" @click="joinRoom">Go!</div>
       </div>
@@ -74,7 +74,7 @@ export default {
   align-items: center;
   width: 100%;
   height: 100%;
-  h2 {
+  strong {
     font-size: 36px;
   }
   &__title {
