@@ -5,7 +5,13 @@
       <div class="createRoom">
         <strong class="mb_16">創建房間</strong>
         <input type="phone" placeholder="請自訂房間ID" v-model="createRoomId" />
-        <div class="btn mt_16 mb_12" @click="createRoom">創建</div>
+        <div
+          class="btn mt_16 mb_12"
+          @click="createRoom"
+          :class="{ disable: loading }"
+        >
+          {{ loading ? "請稍後..." : "創建" }}
+        </div>
       </div>
     </div>
   </div>
@@ -22,9 +28,15 @@ export default {
     const store = useStore();
     const router = useRouter();
     const createRoomId = ref(null);
+    const loading = ref(false);
     const db = firebase.database();
     const createRoom = () => {
-      if (!createRoomId.value) return alert("請輸入房號");
+      loading.value = true;
+
+      if (!createRoomId.value) {
+        loading.value = false;
+        return alert("請輸入房號");
+      }
 
       //先查找是否有該房間
       const theRef = db.ref(`/room/${createRoomId.value}`);
@@ -37,6 +49,7 @@ export default {
             snapshot.val().play_B.lastConnect
           ).isAfter(moment().add(-2, "m").format("YYYY/MM/DD hh:mm"));
           if (playA_status && playB_status) {
+            loading.value = false;
             return alert("已經存在該房間囉，請換一個房號");
           }
         }
@@ -54,6 +67,7 @@ export default {
             },
           })
           .then(() => {
+            loading.value = false;
             store.commit("setLinkedRoom", createRoomId.value);
             store.commit("setRole", "play_A");
             //設定定時器，每一分鐘告訴db，連線還存在
@@ -67,7 +81,7 @@ export default {
       });
     };
     const close = () => content.emit("close");
-    return { createRoom, createRoomId, close };
+    return { createRoom, createRoomId, close, loading };
   },
 };
 </script>

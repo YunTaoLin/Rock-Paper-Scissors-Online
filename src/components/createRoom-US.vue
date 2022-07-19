@@ -9,7 +9,13 @@
           placeholder="Create Room ID"
           v-model="createRoomId"
         />
-        <div class="btn mt_16 mb_12" @click="createRoom">Go!</div>
+        <div
+          class="btn mt_16 mb_12"
+          @click="createRoom"
+          :class="{ disable: loading }"
+        >
+          {{ loading ? "Loading..." : "Go!" }}
+        </div>
       </div>
     </div>
   </div>
@@ -26,13 +32,19 @@ export default {
     const store = useStore();
     const router = useRouter();
     const createRoomId = ref(null);
+    const loading = ref(false);
     const db = firebase.database();
     const createRoom = () => {
-      if (!createRoomId.value) return alert("input room id pleace!");
+      loading.value = true;
+
+      if (!createRoomId.value) {
+        loading.value = false;
+        return alert("input room id pleace!");
+      }
       //先查找是否有該房間
       const theRef = db.ref(`/room/${createRoomId.value}`);
       theRef.once("value").then(function (snapshot) {
-        console.log('XXX',snapshot)
+        console.log("XXX", snapshot);
         if (snapshot.val()) {
           const playA_status = moment(
             snapshot.val().play_A.lastConnect
@@ -41,6 +53,7 @@ export default {
             snapshot.val().play_B.lastConnect
           ).isAfter(moment().add(-2, "m").format("YYYY/MM/DD hh:mm"));
           if (playA_status && playB_status) {
+            loading.value = false;
             return alert("This room already exists, please change the room id");
           }
         }
@@ -58,6 +71,7 @@ export default {
             },
           })
           .then(() => {
+            loading.value = false;
             store.commit("setLinkedRoom", createRoomId.value);
             store.commit("setRole", "play_A");
             //設定定時器，每一分鐘告訴db，連線還存在
@@ -66,12 +80,12 @@ export default {
                 lastConnect: moment(new Date()).format("YYYY/MM/DD hh:mm"),
               });
             }, 60000);
-            router.push("/en-us/gameRoom");
+            router.push("/EN/gameRoom");
           });
       });
     };
     const close = () => content.emit("close");
-    return { createRoom, createRoomId, close };
+    return { createRoom, createRoomId, close, loading };
   },
 };
 </script>

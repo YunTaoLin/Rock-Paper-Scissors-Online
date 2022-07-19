@@ -4,7 +4,7 @@
     <nav class="btn_group">
       <a
         title="play game with english"
-        href="https://yuntaolin.github.io/Rock-Paper-Scissors-Online/en-us"
+        href="https://yuntaolin.github.io/Rock-Paper-Scissors-Online/EN"
         class="btn"
       >
         English
@@ -34,11 +34,11 @@ export default {
         },
         {
           name: `og:description`,
-          content: `Free real-time game of Rock Paper Scissors, you can create an independent room to play games remotely.免費線上即時猜拳遊戲，可創建獨立房號和朋友遠端進行線上即時猜拳，完全免費。`,
+          content: `Free real-time game of Rock Paper Scissors and hand cramps, you can create an independent room to play games remotely.免費線上即時猜拳遊戲，可創建獨立房號和朋友遠端進行線上即時猜拳，完全免費。`,
         },
         {
           name: `description`,
-          content: `Free real-time game of Rock Paper Scissors, you can create an independent room to play games remotely.免費線上即時猜拳遊戲，可創建獨立房號和朋友遠端進行線上即時猜拳，完全免費。`,
+          content: `Free real-time game of Rock Paper Scissors and hand cramps, you can create an independent room to play games remotely.免費線上即時猜拳遊戲，可創建獨立房號和朋友遠端進行線上即時猜拳，完全免費。`,
         },
         {
           name: `twitter:title`,
@@ -46,7 +46,7 @@ export default {
         },
         {
           name: `twitter:description`,
-          content: `Free real-time game of Rock Paper Scissors, you can create an independent room to play games remotely.免費線上即時猜拳遊戲，可創建獨立房號和朋友遠端進行線上即時猜拳，完全免費。`,
+          content: `Free real-time game of Rock Paper Scissors and hand cramps, you can create an independent room to play games remotely.免費線上即時猜拳遊戲，可創建獨立房號和朋友遠端進行線上即時猜拳，完全免費。`,
         },
       ],
     });

@@ -33,11 +33,11 @@ export default {
         },
         {
           name: `og:description`,
-          content: `Free real-time game of Rock Paper Scissors, you can create an independent room to play games remotely.`,
+          content: `Free real-time game of Rock Paper Scissors and hand cramps, you can create an independent room to play games remotely.`,
         },
         {
           name: `description`,
-          content: `Free real-time game of Rock Paper Scissors, you can create an independent room to play games remotely.`,
+          content: `Free real-time game of Rock Paper Scissors and hand cramps, you can create an independent room to play games remotely.`,
         },
         {
           name: `twitter:title`,
@@ -45,7 +45,7 @@ export default {
         },
         {
           name: `twitter:description`,
-          content: `Free real-time game of Rock Paper Scissors, you can create an independent room to play games remotely.`,
+          content: `Free real-time game of Rock Paper Scissors and hand cramps, you can create an independent room to play games remotely.`,
         },
       ],
     });

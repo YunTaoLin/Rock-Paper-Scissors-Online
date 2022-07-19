@@ -1,4 +1,8 @@
-import { createRouter, createWebHashHistory, createWebHistory } from "vue-router";
+import {
+  createRouter,
+  createWebHashHistory,
+  createWebHistory,
+} from "vue-router";
 
 import Index from "./view/Index.vue";
 import Enter from "./view/Enter.vue";
@@ -27,12 +31,16 @@ const routes = [
   // },
   {
     path: "/en-us",
+    redirect: "/EN",
+  },
+  {
+    path: "/EN",
     name: "EnterUS",
     component: Enter_US,
   },
 
   {
-    path: "/en-us/gameRoom",
+    path: "/EN/gameRoom",
     name: "GameroomUS",
     component: GameRoom_US,
   },

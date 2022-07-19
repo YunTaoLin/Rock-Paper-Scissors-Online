@@ -5,7 +5,13 @@
       <div class="joinRoom">
         <strong class="mb_16">Join Room</strong>
         <input type="phone" placeholder="Join Room ID" v-model="joinRoomId" />
-        <div class="btn mt_16 mb_12" @click="joinRoom">Go!</div>
+        <div
+          class="btn mt_16 mb_12"
+          :class="{ disable: loading }"
+          @click="joinRoom"
+        >
+          {{ loading ? "Loading..." : "Go!" }}
+        </div>
       </div>
     </div>
   </div>
@@ -22,25 +28,38 @@ export default {
     const store = useStore();
     const router = useRouter();
     const joinRoomId = ref(null);
+    const loading = ref(false);
     const db = firebase.database();
     const joinRoom = () => {
-      if(!joinRoomId.value) return alert('input room id pleace!')
+      loading.value = true;
+      if (!joinRoomId.value) {
+        loading.value = false;
+        return alert("input room id pleace!");
+      }
       const theRef = db.ref(`/room/${joinRoomId.value}`);
       theRef.once("value").then((snapshot) => {
         const data = snapshot.val();
-        if (!data) return alert("This room doesn't exist");
+        if (!data) {
+          loading.value = false;
+          return alert("This room doesn't exist");
+        }
         //B未加入，或是B離線
         if (
           !data.play_B.lastConnect ||
-          moment(data.play_B.lastConnect).isBefore(moment().add(-2, "m").format("YYYY/MM/DD hh:mm"))
+          moment(data.play_B.lastConnect).isBefore(
+            moment().add(-2, "m").format("YYYY/MM/DD hh:mm")
+          )
         ) {
           store.commit("setRole", "play_B");
         } else if (
           !data.play_A.lastConnect ||
-          moment(data.play_A.lastConnect).isBefore(moment().add(-2, "m").format("YYYY/MM/DD hh:mm"))
+          moment(data.play_A.lastConnect).isBefore(
+            moment().add(-2, "m").format("YYYY/MM/DD hh:mm")
+          )
         ) {
           store.commit("setRole", "play_A");
         } else {
+          loading.value = false;
           return alert("The room is full");
         }
         store.commit("setLinkedRoom", joinRoomId.value);
@@ -50,6 +69,7 @@ export default {
             join: true,
           })
           .then(() => {
+            loading.value = false;
             setInterval(() => {
               db.ref(`/room/${joinRoomId.value}/${store.state.role}`).update({
                 lastConnect: moment(new Date()).format("YYYY/MM/DD hh:mm"),
@@ -60,7 +80,7 @@ export default {
       });
     };
     const close = () => content.emit("close");
-    return { joinRoom, joinRoomId, close };
+    return { joinRoom, joinRoomId, close, loading };
   },
 };
 </script>

@@ -51,6 +51,9 @@ body {
     box-sizing: border-box;
   }
 }
+.disable{
+  user-select: none !important;
+}
 .footer {
   position: absolute;
   left: 0;
