@@ -26,6 +26,12 @@ export default {
   setup() {
     useHead({
       title: "Rock Paper Scissors Online",
+      link: [
+        {
+          rel: `canonical`,
+          href: `https://yuntaolin.github.io/Rock-Paper-Scissors-Online/EN`,
+        },
+      ],
       meta: [
         {
           name: `og:title`,

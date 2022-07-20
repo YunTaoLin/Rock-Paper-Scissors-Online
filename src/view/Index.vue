@@ -27,6 +27,12 @@ export default {
   setup() {
     useHead({
       title: "Rock Paper Scissors Online 線上猜拳",
+      link: [
+        {
+          rel: `canonical`,
+          href: `https://yuntaolin.github.io/Rock-Paper-Scissors-Online/`,
+        },
+      ],
       meta: [
         {
           name: `og:title`,
