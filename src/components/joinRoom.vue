@@ -4,7 +4,7 @@
       <div class="close" @click="close">X</div>
       <div class="joinRoom">
         <strong class="mb_16">加入房間</strong>
-        <input type="phone" placeholder="請輸入房間ID" v-model="joinRoomId" />
+        <input type="phone" placeholder="請輸入房間ID" v-model="joinRoomId" @blur="reset()" />
         <div
           class="btn mt_16 mb_12"
           :class="{ disable: loading }"
@@ -30,6 +30,9 @@ export default {
     const joinRoomId = ref(null);
     const loading = ref(false);
     const db = firebase.database();
+    const reset = () => {
+      window.scrollTo(0, 0);
+    };
     const joinRoom = () => {
       loading.value = true;
       if (!joinRoomId.value) {
@@ -81,7 +84,7 @@ export default {
       });
     };
     const close = () => content.emit("close");
-    return { joinRoom, joinRoomId, close, loading };
+    return { joinRoom, joinRoomId, close, loading ,reset};
   },
 };
 </script>

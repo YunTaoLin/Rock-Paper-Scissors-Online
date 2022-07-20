@@ -8,6 +8,7 @@
           type="phone"
           placeholder="Create Room ID"
           v-model="createRoomId"
+          @blur="reset()"
         />
         <div
           class="btn mt_16 mb_12"
@@ -34,6 +35,9 @@ export default {
     const createRoomId = ref(null);
     const loading = ref(false);
     const db = firebase.database();
+    const reset = () => {
+      window.scrollTo(0, 0);
+    };
     const createRoom = () => {
       loading.value = true;
 
@@ -85,7 +89,7 @@ export default {
       });
     };
     const close = () => content.emit("close");
-    return { createRoom, createRoomId, close, loading };
+    return { createRoom, createRoomId, close, loading,reset };
   },
 };
 </script>

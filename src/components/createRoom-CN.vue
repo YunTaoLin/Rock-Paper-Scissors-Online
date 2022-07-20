@@ -4,7 +4,7 @@
       <div class="close" @click="close">X</div>
       <div class="createRoom">
         <strong class="mb_16">创建房间</strong>
-        <input type="phone" placeholder="请自订房间ID" v-model="createRoomId" />
+        <input type="phone" placeholder="请自订房间ID" v-model="createRoomId" @blur="reset()" />
         <div
           class="btn mt_16 mb_12"
           @click="createRoom"
@@ -30,6 +30,9 @@ export default {
     const createRoomId = ref(null);
     const loading = ref(false);
     const db = firebase.database();
+    const reset = () => {
+      window.scrollTo(0, 0);
+    };
     const createRoom = () => {
       loading.value = true;
 
@@ -81,7 +84,7 @@ export default {
       });
     };
     const close = () => content.emit("close");
-    return { createRoom, createRoomId, close, loading };
+    return { createRoom, createRoomId, close, loading,reset };
   },
 };
 </script>
