@@ -111,7 +111,7 @@ export default {
     const result = ref("");
     const myEnum = ["Win", "Lose", "Draw"];
     if (!store.state.linkedRoom) {
-      router.replace("/EN");
+      router.replace("/en");
     }
     const resultHandler = () => {
       let mySelect = selected.name;

@@ -29,7 +29,7 @@ export default {
       link: [
         {
           rel: `canonical`,
-          href: `https://yuntaolin.github.io/Rock-Paper-Scissors-Online/EN`,
+          href: `https://yuntaolin.github.io/Rock-Paper-Scissors-Online/en`,
         },
       ],
       meta: [

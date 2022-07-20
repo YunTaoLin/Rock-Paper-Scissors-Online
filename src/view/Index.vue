@@ -4,7 +4,7 @@
     <nav class="btn_group">
       <a
         title="play game with english"
-        href="https://yuntaolin.github.io/Rock-Paper-Scissors-Online/EN"
+        href="https://yuntaolin.github.io/Rock-Paper-Scissors-Online/en"
         class="btn"
       >
         English

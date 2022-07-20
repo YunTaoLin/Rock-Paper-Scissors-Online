@@ -31,16 +31,16 @@ const routes = [
   // },
   {
     path: "/en-us",
-    redirect: "/EN",
+    redirect: "/en",
   },
   {
-    path: "/EN",
+    path: "/en",
     name: "EnterUS",
     component: Enter_US,
   },
 
   {
-    path: "/EN/gameRoom",
+    path: "/en/gameRoom",
     name: "GameroomUS",
     component: GameRoom_US,
   },

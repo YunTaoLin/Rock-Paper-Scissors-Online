@@ -75,7 +75,7 @@ export default {
                 lastConnect: moment(new Date()).format("YYYY/MM/DD hh:mm"),
               });
             }, 60000);
-            router.push("/en-us/gameRoom");
+            router.push("/en/gameRoom");
           });
       });
     };
