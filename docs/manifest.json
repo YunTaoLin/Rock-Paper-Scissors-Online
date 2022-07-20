@@ -1,0 +1,35 @@
+{
+  "name": "線上猜拳 Rock Paper Scissors",
+  "short_name": "線上猜拳 Rock Paper Scissors",
+  "icons": [
+    {
+      "src": "/icon-128x128.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-144x144.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-192×192.png",
+      "sizes": "192×192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-256x256.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "./?utm_source=web_app_manifest",
+  "background_color": "#000",
+  "theme_color": "#72edf2",
+  "display": "standalone"
+}
