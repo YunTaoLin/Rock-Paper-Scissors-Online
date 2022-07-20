@@ -16,7 +16,7 @@
 	</url>
 	<url>
 		<loc>
-			https://yuntaolin.github.io/Rock-Paper-Scissors-Online/en
+			https://yuntaolin.github.io/Rock-Paper-Scissors-Online/cn
 		</loc>
 		<lastmod>
 			2022-07-20
@@ -30,7 +30,7 @@
 	</url>
 	<url>
 		<loc>
-			https://yuntaolin.github.io/Rock-Paper-Scissors-Online/cn
+			https://yuntaolin.github.io/Rock-Paper-Scissors-Online/cn.html
 		</loc>
 		<lastmod>
 			2022-07-20
@@ -58,7 +58,63 @@
 	</url>
 	<url>
 		<loc>
+			https://yuntaolin.github.io/Rock-Paper-Scissors-Online/zh-tw.html
+		</loc>
+		<lastmod>
+			2022-07-19
+		</lastmod>
+		<changefreq>
+			monthly
+		</changefreq>
+		<priority>
+			0.7
+		</priority>
+	</url>
+	<url>
+		<loc>
+			https://yuntaolin.github.io/Rock-Paper-Scissors-Online/en
+		</loc>
+		<lastmod>
+			2022-07-20
+		</lastmod>
+		<changefreq>
+			monthly
+		</changefreq>
+		<priority>
+			0.8
+		</priority>
+	</url>
+	<url>
+		<loc>
+			https://yuntaolin.github.io/Rock-Paper-Scissors-Online/en.html
+		</loc>
+		<lastmod>
+			2022-07-19
+		</lastmod>
+		<changefreq>
+			monthly
+		</changefreq>
+		<priority>
+			0.8
+		</priority>
+	</url>
+	<url>
+		<loc>
 			https://yuntaolin.github.io/Rock-Paper-Scissors-Online/en-us
+		</loc>
+		<lastmod>
+			2022-07-19
+		</lastmod>
+		<changefreq>
+			monthly
+		</changefreq>
+		<priority>
+			0.8
+		</priority>
+	</url>
+	<url>
+		<loc>
+			https://yuntaolin.github.io/Rock-Paper-Scissors-Online/en-us.html
 		</loc>
 		<lastmod>
 			2022-07-19
