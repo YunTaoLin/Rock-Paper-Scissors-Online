@@ -2,13 +2,22 @@
   <div :style="{ height: isSafari ? `${mainHeihgt}px` : '100vh' }">
     <router-view></router-view>
     <footer class="footer">
-      Copyright 2022 by
-      <a
-        href="https://github.com/YunTaoLin/Rock-Paper-Scissors-Online"
-        title="author"
-        >yuntaolin (Joe)
-      </a>
-      . All Rights Reserved.
+      <div class="footer__langBtn">
+        <router-link to="/en">English</router-link>
+        |
+        <router-link to="/tw">繁體中文</router-link>
+        |
+        <router-link to="/cn">简体中文</router-link>
+      </div>
+      <div>
+        Copyright 2022 by
+        <a
+          href="https://github.com/YunTaoLin/Rock-Paper-Scissors-Online"
+          title="author"
+          >yuntaolin (Joe)
+        </a>
+        . All Rights Reserved.
+      </div>
     </footer>
   </div>
 </template>
@@ -51,8 +60,8 @@ body {
     box-sizing: border-box;
   }
 }
-.disable{
-  user-select: none !important;
+.disable {
+  pointer-events: none !important;
 }
 .footer {
   position: absolute;
@@ -64,8 +73,24 @@ body {
   text-align: center;
   font-size: 12px;
   color: #000;
-  a{
-  color: rgb(121, 178, 243);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include mobile{
+    flex-direction: column;
+  }
+  a {
+    color: rgb(121, 178, 243);
+  }
+  &__langBtn {
+    a {
+      display: inline-block;
+      margin: 0 12px 8px;
+      font-size: 18px;
+      @include mobile{
+        font-size: 14px;
+      }
+    }
   }
 }
 #app {

@@ -25,7 +25,10 @@ export default {
   components: { CreateRoom, JoinRoom },
   setup() {
     useHead({
-      title: "Rock Paper Scissors Online",
+      title: "Rock Paper Scissors Online | Be Good Tool",
+      htmlAttrs: {
+        lang: "en",
+      },
       link: [
         {
           rel: `canonical`,
@@ -35,7 +38,7 @@ export default {
       meta: [
         {
           name: `og:title`,
-          content: `Rock Paper Scissors Online`,
+          content: `Rock Paper Scissors Online | Be Good Tool`,
         },
         {
           name: `og:description`,
@@ -47,7 +50,7 @@ export default {
         },
         {
           name: `twitter:title`,
-          content: `Rock Paper Scissors Online`,
+          content: `Rock Paper Scissors Online | Be Good Tool`,
         },
         {
           name: `twitter:description`,

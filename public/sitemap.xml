@@ -30,6 +30,20 @@
 	</url>
 	<url>
 		<loc>
+			https://yuntaolin.github.io/Rock-Paper-Scissors-Online/cn
+		</loc>
+		<lastmod>
+			2022-07-20
+		</lastmod>
+		<changefreq>
+			monthly
+		</changefreq>
+		<priority>
+			0.8
+		</priority>
+	</url>
+	<url>
+		<loc>
 			https://yuntaolin.github.io/Rock-Paper-Scissors-Online/zh-tw
 		</loc>
 		<lastmod>

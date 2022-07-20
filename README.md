@@ -1,6 +1,7 @@
 ## 多人即時線上猜拳遊戲
 
 [線上猜拳](https://yuntaolin.github.io/Rock-Paper-Scissors-Online/) <br>
+[线上猜拳](https://yuntaolin.github.io/Rock-Paper-Scissors-Online/cn) <br>
 [Rock Paper Scissors Online](https://yuntaolin.github.io/Rock-Paper-Scissors-Online/en) <br>
 <br>
 核心技術：Vue 3 + Typescript + Vite + WebSocket<br>

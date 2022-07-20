@@ -1,68 +1,68 @@
 <template>
-  <div id="EnterPage">
-    <h1>Rock Paper Scissors<br class="hidden-pad-up" />線上猜拳</h1>
+  <header id="EnterPage">
+    <h1>线上猜拳</h1>
     <nav class="btn_group">
-      <a
-        title="play game with english"
-        href="https://yuntaolin.github.io/Rock-Paper-Scissors-Online/en"
-        class="btn"
-      >
-        English
-      </a>
-      <a
-        title="以简体中文进行游戏"
-        href="https://yuntaolin.github.io/Rock-Paper-Scissors-Online/cn"
-        class="btn"
-      >
-        简体中文
-      </a>
-      <a
-        title="以繁體中文進行遊戲"
-        href="https://yuntaolin.github.io/Rock-Paper-Scissors-Online/zh-tw"
-        class="btn"
-      >
-        繁體中文
-      </a>
+      <div class="btn" @click="openCreateRoom = true">
+        <div>创建房间+</div>
+        <div class="btn--secondaryTitle"></div>
+      </div>
+      <div class="btn" @click="openJoinRoom = true">
+        <div>加入房间</div>
+        <div class="btn--secondaryTitle"></div>
+      </div>
     </nav>
     <div class="other"></div>
-  </div>
+    <CreateRoom v-if="openCreateRoom" @close="openCreateRoom = false" />
+    <JoinRoom v-if="openJoinRoom" @close="openJoinRoom = false" />
+  </header>
 </template>
 
 <script lang="ts">
+import CreateRoom from "@/components/createRoom-CN.vue";
+import JoinRoom from "@/components/joinRoom-CN.vue";
+import { inject, reactive, ref } from "vue";
 import { useHead } from "@vueuse/head";
 export default {
+  components: { CreateRoom, JoinRoom },
   setup() {
     useHead({
-      title: "Rock Paper Scissors Online 線上猜拳 | Be Good Tool",
+      title: "线上猜拳 - 剪刀石头布 | Be Good Tool",
+      htmlAttrs: {
+        lang: "zh-cn",
+      },
       link: [
         {
           rel: `canonical`,
-          href: `https://yuntaolin.github.io/Rock-Paper-Scissors-Online/`,
+          href: `https://yuntaolin.github.io/Rock-Paper-Scissors-Online/cn`,
         },
       ],
       meta: [
         {
           name: `og:title`,
-          content: `Rock Paper Scissors Online 線上猜拳 | Be Good Tool`,
+          content: `线上猜拳 - 剪刀石头布 | Be Good Tool`,
         },
         {
           name: `og:description`,
-          content: `Free real-time game of Rock Paper Scissors and hand cramps, you can create an independent room to play games remotely.免費線上即時猜拳遊戲，可創建獨立房號和朋友遠端進行線上即時猜拳，完全免費。`,
+          content: `免费线上即时猜拳游戏，可创建独立房号和朋友远端进行线上即时猜拳，完全免费。`,
         },
         {
           name: `description`,
-          content: `Free real-time game of Rock Paper Scissors and hand cramps, you can create an independent room to play games remotely.免費線上即時猜拳遊戲，可創建獨立房號和朋友遠端進行線上即時猜拳，完全免費。`,
+          content: `免费线上即时猜拳游戏，可创建独立房号和朋友远端进行线上即时猜拳，完全免费。`,
         },
         {
           name: `twitter:title`,
-          content: `Rock Paper Scissors Online 線上猜拳 | Be Good Tool`,
+          content: `线上猜拳 - 剪刀石头布 | Be Good Tool`,
         },
         {
           name: `twitter:description`,
-          content: `Free real-time game of Rock Paper Scissors and hand cramps, you can create an independent room to play games remotely.免費線上即時猜拳遊戲，可創建獨立房號和朋友遠端進行線上即時猜拳，完全免費。`,
+          content: `免费线上即时猜拳游戏，可创建独立房号和朋友远端进行线上即时猜拳，完全免费。`,
         },
       ],
     });
+    const openCreateRoom = ref(false);
+    const openJoinRoom = ref(false);
+
+    return { openCreateRoom, openJoinRoom };
   },
 };
 </script>
