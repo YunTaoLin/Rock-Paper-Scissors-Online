@@ -219,6 +219,8 @@ export default {
   justify-content: space-around;
   @include pad {
     justify-content: flex-start;
+    padding: 24px 12px 62px;
+
   }
   .space {
     height: 5vh;

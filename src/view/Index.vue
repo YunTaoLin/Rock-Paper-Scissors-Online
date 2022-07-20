@@ -95,8 +95,8 @@ export default {
     align-items: center;
     flex-direction: column;
     .btn {
-      width: 36vw;
-      min-height: 150px;
+      width: 32vw;
+      min-height: 144px;
       padding: 24px;
       display: flex;
       flex-direction: column;
@@ -105,7 +105,7 @@ export default {
       border: 8px solid #000;
       margin: 24px;
       border-radius: 600px;
-      font-size: 60px;
+      font-size: 52px;
       cursor: pointer;
       background-color: rgb(243, 210, 101);
       transition: 0.2s;

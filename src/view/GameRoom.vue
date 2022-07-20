@@ -18,9 +18,7 @@
           </div>
           <div v-else>?</div>
         </div>
-        <h2>
-          自己
-        </h2>
+        <h2>自己</h2>
       </div>
       <div class="vs">VS</div>
       <div class="player other">
@@ -219,6 +217,7 @@ export default {
   justify-content: space-around;
   @include pad {
     justify-content: flex-start;
+    padding: 24px 12px 62px;
   }
   .space {
     height: 5vh;
@@ -404,7 +403,7 @@ export default {
     align-items: center;
     border: 4px solid #000;
     margin: 12px 0;
-    padding:4px 12px;
+    padding: 4px 12px;
     border-radius: 600px;
     font-size: 20px;
     font-weight: 700;
