@@ -12,9 +12,9 @@
       <div>
         Copyright 2022 by
         <a
-          href="https://github.com/YunTaoLin/Rock-Paper-Scissors-Online"
+          href="https://www.begoodtool.com/"
           title="author"
-          >yuntaolin (Joe)
+          >Be Good Tool
         </a>
         . All Rights Reserved.
       </div>

@@ -26,7 +26,7 @@ export default {
   components: { CreateRoom, JoinRoom },
   setup() {
     useHead({
-      title: "线上猜拳 - 剪刀石头布 | Be Good Tool",
+      title: "线上猜拳 - 剪刀石头布 - 是个好工具",
       htmlAttrs: {
         lang: "zh-cn",
       },
@@ -39,7 +39,7 @@ export default {
       meta: [
         {
           name: `og:title`,
-          content: `线上猜拳 - 剪刀石头布 | Be Good Tool`,
+          content: `线上猜拳 - 剪刀石头布 - 是个好工具`,
         },
         {
           name: `og:description`,
@@ -51,7 +51,7 @@ export default {
         },
         {
           name: `twitter:title`,
-          content: `线上猜拳 - 剪刀石头布 | Be Good Tool`,
+          content: `线上猜拳 - 剪刀石头布 - 是个好工具`,
         },
         {
           name: `twitter:description`,
