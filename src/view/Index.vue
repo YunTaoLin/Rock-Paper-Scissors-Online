@@ -33,7 +33,7 @@ import { useHead } from "@vueuse/head";
 export default {
   setup() {
     useHead({
-      title: "Rock Paper Scissors Online 線上猜拳 | Be Good Tool",
+      title: "Rock Paper Scissors Online 線上猜拳 - Be Good Tool",
       link: [
         {
           rel: `canonical`,
@@ -43,7 +43,7 @@ export default {
       meta: [
         {
           name: `og:title`,
-          content: `Rock Paper Scissors Online 線上猜拳 | Be Good Tool`,
+          content: `Rock Paper Scissors Online 線上猜拳 - Be Good Tool`,
         },
         {
           name: `og:description`,
@@ -55,7 +55,7 @@ export default {
         },
         {
           name: `twitter:title`,
-          content: `Rock Paper Scissors Online 線上猜拳 | Be Good Tool`,
+          content: `Rock Paper Scissors Online 線上猜拳 - Be Good Tool`,
         },
         {
           name: `twitter:description`,
