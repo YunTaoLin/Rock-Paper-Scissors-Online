@@ -32,7 +32,7 @@ export default {
       link: [
         {
           rel: `canonical`,
-          href: `https://yuntaolin.github.io/Rock-Paper-Scissors-Online/en`,
+          href: `https://morra.begoodtool.com/en`,
         },
       ],
       meta: [
@@ -42,11 +42,11 @@ export default {
         },
         {
           name: `og:description`,
-          content: `Free real-time game of Rock Paper Scissors and hand cramps, you can create an independent room to play games remotely.`,
+          content: `Free real-time game of Rock Paper Scissors and morra, you can create an independent room to play games remotely.`,
         },
         {
           name: `description`,
-          content: `Free real-time game of Rock Paper Scissors and hand cramps, you can create an independent room to play games remotely.`,
+          content: `Free real-time game of Rock Paper Scissors and morra, you can create an independent room to play games remotely.`,
         },
         {
           name: `twitter:title`,
@@ -54,7 +54,7 @@ export default {
         },
         {
           name: `twitter:description`,
-          content: `Free real-time game of Rock Paper Scissors and hand cramps, you can create an independent room to play games remotely.`,
+          content: `Free real-time game of Rock Paper Scissors and morra, you can create an independent room to play games remotely.`,
         },
       ],
     });

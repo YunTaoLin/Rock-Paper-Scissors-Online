@@ -31,7 +31,7 @@ export default defineConfig({
     sourcemap: false,
     manifest: false,
   },
-  base: "/Rock-Paper-Scissors-Online",
+  base: "/",
   plugins: [
     // new PrerenderSPAPlugin({
     //   staticDir: path.join(__dirname, "dist"),

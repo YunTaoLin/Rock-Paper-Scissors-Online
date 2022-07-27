@@ -33,7 +33,7 @@ export default {
       link: [
         {
           rel: `canonical`,
-          href: `https://yuntaolin.github.io/Rock-Paper-Scissors-Online/cn`,
+          href: `https://morra.begoodtool.com/cn`,
         },
       ],
       meta: [

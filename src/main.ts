@@ -10,7 +10,7 @@ import routes from "./router";
 // console.log("routes", routes);
 export const createApp = ViteSSG(
   App,
-  { routes, base: "/Rock-Paper-Scissors-Online/" },
+  { routes, base: "/" },
   ({ app, router, routes, isClient, initialState }) => {
     Object.values(import.meta.globEager('./modules/*.ts')).map(i => i.install?.(app))
     app.use(store);

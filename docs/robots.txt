@@ -1,4 +1,4 @@
-Sitemap: https://yuntaolin.github.io/Rock-Paper-Scissors-Online/sitemap.xml
+Sitemap: https://morra.begoodtool.com/sitemap.xml
 
 User-agent: *
 Disallow:

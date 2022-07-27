@@ -4,21 +4,21 @@
     <nav class="btn_group">
       <a
         title="play game with english"
-        href="https://yuntaolin.github.io/Rock-Paper-Scissors-Online/en"
+        href="https://morra.begoodtool.com/en"
         class="btn"
       >
         English
       </a>
       <a
         title="以简体中文进行游戏"
-        href="https://yuntaolin.github.io/Rock-Paper-Scissors-Online/cn"
+        href="https://morra.begoodtool.com/cn"
         class="btn"
       >
         简体中文
       </a>
       <a
         title="以繁體中文進行遊戲"
-        href="https://yuntaolin.github.io/Rock-Paper-Scissors-Online/zh-tw"
+        href="https://morra.begoodtool.com/zh-tw"
         class="btn"
       >
         繁體中文
@@ -37,7 +37,7 @@ export default {
       link: [
         {
           rel: `canonical`,
-          href: `https://yuntaolin.github.io/Rock-Paper-Scissors-Online/`,
+          href: `https://morra.begoodtool.com/`,
         },
       ],
       meta: [
@@ -47,11 +47,11 @@ export default {
         },
         {
           name: `og:description`,
-          content: `Free real-time game of Rock Paper Scissors and hand cramps, you can create an independent room to play games remotely.免費線上即時猜拳遊戲，可創建獨立房號和朋友遠端進行線上即時猜拳，完全免費。`,
+          content: `Free real-time game of Rock Paper Scissors and morra, you can create an independent room to play games remotely.免費線上即時猜拳遊戲，可創建獨立房號和朋友遠端進行線上即時猜拳，完全免費。`,
         },
         {
           name: `description`,
-          content: `Free real-time game of Rock Paper Scissors and hand cramps, you can create an independent room to play games remotely.免費線上即時猜拳遊戲，可創建獨立房號和朋友遠端進行線上即時猜拳，完全免費。`,
+          content: `Free real-time game of Rock Paper Scissors and morra, you can create an independent room to play games remotely.免費線上即時猜拳遊戲，可創建獨立房號和朋友遠端進行線上即時猜拳，完全免費。`,
         },
         {
           name: `twitter:title`,
@@ -59,7 +59,7 @@ export default {
         },
         {
           name: `twitter:description`,
-          content: `Free real-time game of Rock Paper Scissors and hand cramps, you can create an independent room to play games remotely.免費線上即時猜拳遊戲，可創建獨立房號和朋友遠端進行線上即時猜拳，完全免費。`,
+          content: `Free real-time game of Rock Paper Scissors and morra, you can create an independent room to play games remotely.免費線上即時猜拳遊戲，可創建獨立房號和朋友遠端進行線上即時猜拳，完全免費。`,
         },
       ],
     });
