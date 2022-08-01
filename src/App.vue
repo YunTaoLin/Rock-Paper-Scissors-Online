@@ -56,9 +56,9 @@ body {
   flex-direction: column;
   justify-content: space-between;
   .main {
-    min-height: 80vh;
+    min-height: 90vh;
     @include pad {
-      min-height: 70vh;
+      min-height: 80vh;
     }
   }
 }
