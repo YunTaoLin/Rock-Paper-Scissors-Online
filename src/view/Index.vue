@@ -47,11 +47,11 @@ export default {
         },
         {
           name: `og:description`,
-          content: `Free real-time game of Rock Paper Scissors and morra, you can create an independent room to play games remotely.免費線上即時猜拳遊戲，可創建獨立房號和朋友遠端進行線上即時猜拳，完全免費。`,
+          content: `Free real-time game of Rock Paper Scissors and morra, you can create an independent room to play games remotely.免費線上即時猜拳遊戲，可創建獨立房號和朋友遠端進行線上即時猜拳，想要跟遠端的家人、同事、朋友來一場最公平的剪刀石頭布? 就來Be Good Tool線上猜拳！。`,
         },
         {
           name: `description`,
-          content: `Free real-time game of Rock Paper Scissors and morra, you can create an independent room to play games remotely.免費線上即時猜拳遊戲，可創建獨立房號和朋友遠端進行線上即時猜拳，完全免費。`,
+          content: `Free real-time game of Rock Paper Scissors and morra, you can create an independent room to play games remotely.免費線上即時猜拳遊戲，可創建獨立房號和朋友遠端進行線上即時猜拳，想要跟遠端的家人、同事、朋友來一場最公平的剪刀石頭布? 就來Be Good Tool線上猜拳！。`,
         },
         {
           name: `twitter:title`,
@@ -59,7 +59,7 @@ export default {
         },
         {
           name: `twitter:description`,
-          content: `Free real-time game of Rock Paper Scissors and morra, you can create an independent room to play games remotely.免費線上即時猜拳遊戲，可創建獨立房號和朋友遠端進行線上即時猜拳，完全免費。`,
+          content: `Free real-time game of Rock Paper Scissors and morra, you can create an independent room to play games remotely.免費線上即時猜拳遊戲，可創建獨立房號和朋友遠端進行線上即時猜拳，想要跟遠端的家人、同事、朋友來一場最公平的剪刀石頭布? 就來Be Good Tool線上猜拳！。`,
         },
       ],
     });
@@ -71,7 +71,6 @@ export default {
 @import "@/scss/main.scss";
 #EnterPage {
   width: 100%;
-  height: 100%;
   padding-top: 48px;
   display: flex;
   flex-direction: column;
@@ -134,7 +133,7 @@ export default {
     }
   }
   .other {
-    height: 200px;
+    height: 40px;
     padding-top: 40px;
     box-sizing: border-box;
     display: flex;

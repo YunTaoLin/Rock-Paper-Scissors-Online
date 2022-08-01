@@ -1,6 +1,10 @@
 <template>
   <header id="EnterPage">
     <h1>线上猜拳</h1>
+    <h2 style="display: none">
+      完全免费的线上即时猜拳游戏，可创建独立房号和朋友远端进行线上即时猜拳，想要跟远端的家人、同事、朋友来一场最公平的剪刀石头布?
+      就来Be Good Tool线上猜拳！
+    </h2>
     <nav class="btn_group">
       <div class="btn" @click="openCreateRoom = true">
         <div>创建房间+</div>
@@ -26,7 +30,8 @@ export default {
   components: { CreateRoom, JoinRoom },
   setup() {
     useHead({
-      title: "线上猜拳 - 剪刀石头布 - 是个好工具",
+      title:
+        "线上猜拳 - 剪刀石头布 可远端建立房号支援多人同时在线 - 是个好工具 Be Good Tool",
       htmlAttrs: {
         lang: "zh-cn",
       },
@@ -39,23 +44,23 @@ export default {
       meta: [
         {
           name: `og:title`,
-          content: `线上猜拳 - 剪刀石头布 - 是个好工具`,
+          content: `线上猜拳 - 剪刀石头布 可远端建立房号支援多人同时在线 - 是个好工具 Be Good Tool`,
         },
         {
           name: `og:description`,
-          content: `免费线上即时猜拳游戏，可创建独立房号和朋友远端进行线上即时猜拳，完全免费。`,
+          content: `完全免费的线上即时猜拳游戏，可创建独立房号和朋友远端进行线上即时猜拳，想要跟远端的家人、同事、朋友来一场最公平的剪刀石头布? 就来Be Good Tool线上猜拳！`,
         },
         {
           name: `description`,
-          content: `免费线上即时猜拳游戏，可创建独立房号和朋友远端进行线上即时猜拳，完全免费。`,
+          content: `完全免费的线上即时猜拳游戏，可创建独立房号和朋友远端进行线上即时猜拳，想要跟远端的家人、同事、朋友来一场最公平的剪刀石头布? 就来Be Good Tool线上猜拳！`,
         },
         {
           name: `twitter:title`,
-          content: `线上猜拳 - 剪刀石头布 - 是个好工具`,
+          content: `线上猜拳 - 剪刀石头布 可远端建立房号支援多人同时在线 - 是个好工具 Be Good Tool`,
         },
         {
           name: `twitter:description`,
-          content: `免费线上即时猜拳游戏，可创建独立房号和朋友远端进行线上即时猜拳，完全免费。`,
+          content: `完全免费的线上即时猜拳游戏，可创建独立房号和朋友远端进行线上即时猜拳，想要跟远端的家人、同事、朋友来一场最公平的剪刀石头布? 就来Be Good Tool线上猜拳！`,
         },
       ],
     });
@@ -94,6 +99,10 @@ export default {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin-top: 40px;
+    @include pad {
+      margin-top: 12px;
+    }
     .btn {
       width: 36vw;
       min-height: 150px;
@@ -134,7 +143,7 @@ export default {
     }
   }
   .other {
-    height: 200px;
+    height: 40px;
     padding-top: 40px;
     box-sizing: border-box;
     display: flex;

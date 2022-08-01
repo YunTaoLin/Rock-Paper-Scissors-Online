@@ -1,6 +1,12 @@
 <template>
   <div id="EnterPage">
     <h1>Rock Paper Scissors Online<br class="hidden-pad-up" /></h1>
+    <h2 style="display: none">
+      Free real-time game of rock paper scissors and morra you can create an
+      independent room number and remote friends for online real-time guessing,
+      want to have the most fair morra with your family, colleagues and friends?
+      Come to Be Good Tool online rock paper scissors!
+    </h2>
     <nav class="btn_group">
       <div class="btn" @click="openCreateRoom = true">
         <div>Create Room +</div>
@@ -25,7 +31,8 @@ export default {
   components: { CreateRoom, JoinRoom },
   setup() {
     useHead({
-      title: "Rock Paper Scissors Online - Be Good Tool",
+      title:
+        "Rock Paper Scissors Online - Remotely create room numbers to support multiple people online at the same time - Be Good Tool",
       htmlAttrs: {
         lang: "en",
       },
@@ -38,23 +45,23 @@ export default {
       meta: [
         {
           name: `og:title`,
-          content: `Rock Paper Scissors Online - Be Good Tool`,
+          content: `Rock Paper Scissors Online - Remotely create room numbers to support multiple people online at the same time - Be Good Tool`,
         },
         {
           name: `og:description`,
-          content: `Free real-time game of Rock Paper Scissors and morra, you can create an independent room to play games remotely.`,
+          content: `Free real-time game of rock paper scissors and morra you can create an independent room number and remote friends for online real-time guessing, want to have the most fair morra with your family, colleagues and friends? Come to Be Good Tool online rock paper scissors!`,
         },
         {
           name: `description`,
-          content: `Free real-time game of Rock Paper Scissors and morra, you can create an independent room to play games remotely.`,
+          content: `Free real-time game of rock paper scissors and morra you can create an independent room number and remote friends for online real-time guessing, want to have the most fair morra with your family, colleagues and friends? Come to Be Good Tool online rock paper scissors!`,
         },
         {
           name: `twitter:title`,
-          content: `Rock Paper Scissors Online - Be Good Tool`,
+          content: `Rock Paper Scissors Online - Remotely create room numbers to support multiple people online at the same time - Be Good Tool`,
         },
         {
           name: `twitter:description`,
-          content: `Free real-time game of Rock Paper Scissors and morra, you can create an independent room to play games remotely.`,
+          content: `Free real-time game of rock paper scissors and morra you can create an independent room number and remote friends for online real-time guessing, want to have the most fair morra with your family, colleagues and friends? Come to Be Good Tool online rock paper scissors!`,
         },
       ],
     });
@@ -93,6 +100,10 @@ export default {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin-top: 40px;
+    @include pad {
+      margin-top: 12px;
+    }
     .btn {
       width: 36vw;
       min-height: 150px;
@@ -133,7 +144,7 @@ export default {
     }
   }
   .other {
-    height: 200px;
+    height: 40px;
     padding-top: 40px;
     box-sizing: border-box;
     display: flex;

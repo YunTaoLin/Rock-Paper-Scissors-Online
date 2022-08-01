@@ -11,6 +11,10 @@ import Enter_US from "./view/Enter-US.vue";
 import GameRoom_US from "./view/GameRoom-US.vue";
 import Enter_CN from "./view/Enter-CN.vue";
 import GameRoom_CN from "./view/GameRoom-CN.vue";
+import Terms from "./view/Terms.vue";
+import Terms_US from "./view/Terms-US.vue";
+import Terms_CN from "./view/Terms-CN.vue";
+
 const routes = [
   {
     path: "/",
@@ -57,6 +61,26 @@ const routes = [
     path: "/cn/gameRoom",
     name: "GameroomCN",
     component: GameRoom_CN,
+  },
+  //條款 terms
+  {
+    path: "/terms",
+    redirect: "/terms/tw",
+  },
+  {
+    path: "/terms/tw",
+    name: "Terms",
+    component: Terms,
+  },
+  {
+    path: "/terms/cn",
+    name: "TermsCN",
+    component: Terms_CN,
+  },
+  {
+    path: "/terms/en",
+    name: "TermsUS",
+    component: Terms_US,
   },
   //其他
   {

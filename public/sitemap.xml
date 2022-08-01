@@ -30,20 +30,6 @@
 	</url>
 	<url>
 		<loc>
-			https://morra.begoodtool.com/cn.html
-		</loc>
-		<lastmod>
-			2022-07-20
-		</lastmod>
-		<changefreq>
-			monthly
-		</changefreq>
-		<priority>
-			0.8
-		</priority>
-	</url>
-	<url>
-		<loc>
 			https://morra.begoodtool.com/zh-tw
 		</loc>
 		<lastmod>
@@ -86,20 +72,6 @@
 	</url>
 	<url>
 		<loc>
-			https://morra.begoodtool.com/en.html
-		</loc>
-		<lastmod>
-			2022-07-19
-		</lastmod>
-		<changefreq>
-			monthly
-		</changefreq>
-		<priority>
-			0.8
-		</priority>
-	</url>
-	<url>
-		<loc>
 			https://morra.begoodtool.com/en-us
 		</loc>
 		<lastmod>
@@ -114,16 +86,72 @@
 	</url>
 	<url>
 		<loc>
-			https://morra.begoodtool.com/en-us.html
+			https://www.begoodtool.com
 		</loc>
 		<lastmod>
-			2022-07-19
+			2022-08-01
 		</lastmod>
 		<changefreq>
 			monthly
 		</changefreq>
 		<priority>
 			0.8
+		</priority>
+	</url>
+	<url>
+		<loc>
+			https://blog.begoodtool.com
+		</loc>
+		<lastmod>
+			2022-08-01
+		</lastmod>
+		<changefreq>
+			monthly
+		</changefreq>
+		<priority>
+			0.8
+		</priority>
+	</url>
+	<url>
+		<loc>
+			https://morra.begoodtool.com/terms/tw
+		</loc>
+		<lastmod>
+			2022-08-01
+		</lastmod>
+		<changefreq>
+			monthly
+		</changefreq>
+		<priority>
+			0.6
+		</priority>
+	</url>
+	<url>
+		<loc>
+			https://morra.begoodtool.com/terms/us
+		</loc>
+		<lastmod>
+			2022-08-01
+		</lastmod>
+		<changefreq>
+			monthly
+		</changefreq>
+		<priority>
+			0.6
+		</priority>
+	</url>
+	<url>
+		<loc>
+			https://morra.begoodtool.com/terms/cn
+		</loc>
+		<lastmod>
+			2022-08-01
+		</lastmod>
+		<changefreq>
+			monthly
+		</changefreq>
+		<priority>
+			0.6
 		</priority>
 	</url>
 </urlset>

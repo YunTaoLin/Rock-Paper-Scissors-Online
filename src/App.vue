@@ -1,24 +1,10 @@
 <template>
-  <div :style="{ height: isSafari ? `${mainHeihgt}px` : '100vh' }">
-    <router-view></router-view>
-    <footer class="footer">
-      <div class="footer__langBtn">
-        <router-link to="/en">English</router-link>
-        |
-        <router-link to="/tw">繁體中文</router-link>
-        |
-        <router-link to="/cn">简体中文</router-link>
-      </div>
-      <div>
-        Copyright 2022 by
-        <a
-          href="https://www.begoodtool.com/"
-          title="author"
-          >Be Good Tool
-        </a>
-        . All Rights Reserved.
-      </div>
-    </footer>
+  <!-- :style="{ height: isSafari ? `${mainHeihgt}px` : '100vh' }" -->
+  <div class="wrapping">
+    <div class="main">
+      <router-view></router-view>
+    </div>
+    <Footer></Footer>
   </div>
 </template>
 
@@ -27,7 +13,11 @@ import firebaseConfig from "./firebase/firebase.json";
 import firebase from "firebase/compat/app";
 import "firebase/compat/database";
 import { ref } from "@vue/reactivity";
+import { computed } from "@vue/runtime-core";
+import { useRoute } from "vue-router";
+import Footer from "@/components/Footer.vue";
 export default {
+  components: { Footer },
   setup() {
     let firebaseAPP = firebase.initializeApp(firebaseConfig);
     let appHeihgt = document.documentElement.clientHeight;
@@ -40,6 +30,7 @@ export default {
       //是safari
       isSafari.value = false;
     }
+
     return { appHeihgt, isSafari, mainHeihgt };
   },
 };
@@ -55,18 +46,27 @@ body {
     no-repeat;
   padding: 0;
   margin: 0;
-  overflow: hidden;
   * {
     box-sizing: border-box;
   }
 }
+.wrapping {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  .main {
+    min-height: 80vh;
+    @include pad {
+      min-height: 70vh;
+    }
+  }
+}
+
 .disable {
   pointer-events: none !important;
 }
-.footer {
-  position: absolute;
-  left: 0;
-  bottom: 0;
+/* .footer {
   width: 100%;
   padding: 8px;
   background-color: #fff;
@@ -76,7 +76,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  @include mobile{
+  @include mobile {
     flex-direction: column;
   }
   a {
@@ -87,12 +87,12 @@ body {
       display: inline-block;
       margin: 0 12px 8px;
       font-size: 18px;
-      @include mobile{
+      @include mobile {
         font-size: 14px;
       }
     }
   }
-}
+} */
 #app {
   width: 100%;
   height: 100%;

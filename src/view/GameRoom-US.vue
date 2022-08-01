@@ -65,7 +65,10 @@
       <div class="refreshBtn" @click="again()">Play Again！</div>
     </div>
     <!-- //撐高底部 -->
-    <div class="space"></div>
+    <div class="space">
+      <div>WIN：{{win}} 場</div>
+      <div>LOSE：{{lose}} 場</div>
+    </div>
     <div class="loading" v-show="!startGame">Waiting Opponent Join...</div>
     <div class="loading" v-show="waiting">Waiting Opponent Choose...</div>
   </div>
@@ -101,6 +104,8 @@ const selectList = [
 ];
 export default {
   setup() {
+    const win = ref(0);
+    const lose = ref(0);
     const store = useStore();
     const router = useRouter();
     const db = firebase.database();
@@ -119,17 +124,35 @@ export default {
       switch (mySelect) {
         case "剪刀":
           if (opponent == "剪刀") result.value = myEnum[2];
-          if (opponent == "石頭") result.value = myEnum[1];
-          if (opponent == "布") result.value = myEnum[0];
+          if (opponent == "石頭") {
+            lose.value++;
+            result.value = myEnum[1];
+          }
+          if (opponent == "布") {
+            win.value++;
+            result.value = myEnum[0];
+          }
           break;
         case "石頭":
-          if (opponent == "剪刀") result.value = myEnum[0];
+          if (opponent == "剪刀") {
+            win.value++;
+            result.value = myEnum[0];
+          }
           if (opponent == "石頭") result.value = myEnum[2];
-          if (opponent == "布") result.value = myEnum[1];
+          if (opponent == "布") {
+            lose.value++;
+            result.value = myEnum[1];
+          }
           break;
         case "布":
-          if (opponent == "剪刀") result.value = myEnum[1];
-          if (opponent == "石頭") result.value = myEnum[0];
+          if (opponent == "剪刀") {
+            lose.value++;
+            result.value = myEnum[1];
+          }
+          if (opponent == "石頭") {
+            win.value++;
+            result.value = myEnum[0];
+          }
           if (opponent == "布") result.value = myEnum[2];
           break;
       }
@@ -201,6 +224,8 @@ export default {
       opponentSelected,
       result,
       again,
+      win,
+      lose,
     };
   },
 };
@@ -219,10 +244,17 @@ export default {
   @include pad {
     justify-content: flex-start;
     padding: 24px 12px 62px;
-
   }
   .space {
+    padding: 12px 24px;
     height: 5vh;
+    font-size: 28px;
+    color: rgb(60, 60, 60);
+    font-weight: 700;
+    @include pad {
+      padding: 8px 8px;
+      font-size: 18px;
+    }
   }
 }
 .roomId {
@@ -408,7 +440,7 @@ export default {
     border-radius: 600px;
     font-size: 20px;
     font-weight: 700;
-    padding:4px 12px;
+    padding: 4px 12px;
     cursor: pointer;
     background-color: rgb(236, 205, 102);
     transition: 0.2s;

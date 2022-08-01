@@ -1,6 +1,7 @@
 <template>
   <header id="EnterPage">
     <h1>線上猜拳</h1>
+    <h2 style="display:none">完全免費的線上即時猜拳遊戲，可創建獨立房號和朋友遠端進行線上即時猜拳，想要跟遠端的家人、同事、朋友來一場最公平的剪刀石頭布? 就來Be Good Tool線上猜拳！</h2>
     <nav class="btn_group">
       <div class="btn" @click="openCreateRoom = true">
         <div>創建房間+</div>
@@ -26,7 +27,7 @@ export default {
   components: { CreateRoom, JoinRoom },
   setup() {
     useHead({
-      title: "線上猜拳 - 剪刀石頭布 - 是個好工具",
+      title: "線上猜拳 - 剪刀石頭布 可遠端建立房號支援多人同時在線 - 是個好工具 Be Good Tool",
       htmlAttrs: {
         lang: "zh-tw",
       },
@@ -39,23 +40,23 @@ export default {
       meta: [
         {
           name: `og:title`,
-          content: `線上猜拳 - 剪刀石頭布 - 是個好工具`,
+          content: `線上猜拳 - 剪刀石頭布 可遠端建立房號支援多人同時在線 - 是個好工具 Be Good Tool`,
         },
         {
           name: `og:description`,
-          content: `免費線上即時猜拳遊戲，可創建獨立房號和朋友遠端進行線上即時猜拳，完全免費。`,
+          content: `完全免費的線上即時猜拳遊戲，可創建獨立房號和朋友遠端進行線上即時猜拳，想要跟遠端的家人、同事、朋友來一場最公平的剪刀石頭布? 就來Be Good Tool線上猜拳！`,
         },
         {
           name: `description`,
-          content: `免費線上即時猜拳遊戲，可創建獨立房號和朋友遠端進行線上即時猜拳，完全免費。`,
+          content: `完全免費的線上即時猜拳遊戲，可創建獨立房號和朋友遠端進行線上即時猜拳，想要跟遠端的家人、同事、朋友來一場最公平的剪刀石頭布? 就來Be Good Tool線上猜拳！`,
         },
         {
           name: `twitter:title`,
-          content: `線上猜拳 - 剪刀石頭布 - 是個好工具`,
+          content: `線上猜拳 - 剪刀石頭布 可遠端建立房號支援多人同時在線 - 是個好工具 Be Good Tool`,
         },
         {
           name: `twitter:description`,
-          content: `免費線上即時猜拳遊戲，可創建獨立房號和朋友遠端進行線上即時猜拳，完全免費。`,
+          content: `完全免費的線上即時猜拳遊戲，可創建獨立房號和朋友遠端進行線上即時猜拳，想要跟遠端的家人、同事、朋友來一場最公平的剪刀石頭布? 就來Be Good Tool線上猜拳！`,
         },
       ],
     });
@@ -94,6 +95,10 @@ export default {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin-top: 40px;
+    @include pad {
+      margin-top: 12px;
+    }
     .btn {
       width: 36vw;
       min-height: 150px;
@@ -134,7 +139,7 @@ export default {
     }
   }
   .other {
-    height: 200px;
+    height: 40px;
     padding-top: 40px;
     box-sizing: border-box;
     display: flex;

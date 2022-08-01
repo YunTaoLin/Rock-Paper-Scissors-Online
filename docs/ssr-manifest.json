@@ -114,6 +114,16 @@
     "/assets/石頭.401cfcbe.png",
     "/assets/布.2b9332b0.png"
   ],
+  "src/components/Footer.vue?vue&type=style&index=0&lang.scss": [
+    "/assets/剪刀.3781ad54.png",
+    "/assets/石頭.401cfcbe.png",
+    "/assets/布.2b9332b0.png"
+  ],
+  "src/components/Footer.vue": [
+    "/assets/剪刀.3781ad54.png",
+    "/assets/石頭.401cfcbe.png",
+    "/assets/布.2b9332b0.png"
+  ],
   "src/App.vue?vue&type=style&index=0&lang.scss": [
     "/assets/剪刀.3781ad54.png",
     "/assets/石頭.401cfcbe.png",
@@ -285,6 +295,31 @@
     "/assets/布.2b9332b0.png"
   ],
   "src/view/GameRoom-CN.vue": [
+    "/assets/剪刀.3781ad54.png",
+    "/assets/石頭.401cfcbe.png",
+    "/assets/布.2b9332b0.png"
+  ],
+  "src/view/Terms.vue?vue&type=style&index=0&lang.scss": [
+    "/assets/剪刀.3781ad54.png",
+    "/assets/石頭.401cfcbe.png",
+    "/assets/布.2b9332b0.png"
+  ],
+  "src/view/Terms.vue": [
+    "/assets/剪刀.3781ad54.png",
+    "/assets/石頭.401cfcbe.png",
+    "/assets/布.2b9332b0.png"
+  ],
+  "src/view/Terms-US.vue": [
+    "/assets/剪刀.3781ad54.png",
+    "/assets/石頭.401cfcbe.png",
+    "/assets/布.2b9332b0.png"
+  ],
+  "src/view/Terms-CN.vue?vue&type=style&index=0&lang.scss": [
+    "/assets/剪刀.3781ad54.png",
+    "/assets/石頭.401cfcbe.png",
+    "/assets/布.2b9332b0.png"
+  ],
+  "src/view/Terms-CN.vue": [
     "/assets/剪刀.3781ad54.png",
     "/assets/石頭.401cfcbe.png",
     "/assets/布.2b9332b0.png"
