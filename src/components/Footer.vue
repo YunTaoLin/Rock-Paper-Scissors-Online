@@ -160,7 +160,7 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #547387; //#a59379;
+  background-color: #89A; //#a59379;//547387
   /* background: linear-gradient(70deg, #72edf2, rgb(121, 178, 243)) 100% 100%
     no-repeat; */
   a {
@@ -264,7 +264,6 @@ footer {
   }
   .Copyright {
     width: 100%;
-    background-color: #547387;
     text-align: center;
     line-height: 2;
     padding: 12px 0;
