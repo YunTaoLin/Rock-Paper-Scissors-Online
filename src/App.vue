@@ -2,36 +2,27 @@
   <!-- :style="{ height: isSafari ? `${mainHeihgt}px` : '100vh' }" -->
   <div class="wrapping">
     <div class="main">
-      <router-view></router-view>
+      <h1 class="mb_12">感謝您使用 Be Good Tool 線上猜拳</h1>
+      <h2 class="mb_12">網站搬家囉，<br />五秒鐘後進行跳轉</h2>
+      <h3 class="mb_12">
+        或是
+        <a href="https://morra.begoodtool.com/">點此前往</a>
+      </h3>
     </div>
-    <Footer></Footer>
   </div>
 </template>
 
 <script lang="ts">
-import firebaseConfig from "./firebase/firebase.json";
-import firebase from "firebase/compat/app";
-import "firebase/compat/database";
-import { ref } from "@vue/reactivity";
-import { computed } from "@vue/runtime-core";
-import { useRoute } from "vue-router";
-import Footer from "@/components/Footer.vue";
+import { onMounted } from "@vue/runtime-core";
 export default {
-  components: { Footer },
   setup() {
-    let firebaseAPP = firebase.initializeApp(firebaseConfig);
-    let appHeihgt = document.documentElement.clientHeight;
-    let isSafari = ref(false);
-    let mainHeihgt = document.documentElement.clientHeight;
-    if (
-      /Safari/.test(navigator.userAgent) &&
-      !/Chrome/.test(navigator.userAgent)
-    ) {
-      //是safari
-      isSafari.value = false;
-    }
+    onMounted(() => {
+      setTimeout(() => {
+        window.location.href = "https://morra.begoodtool.com/";
+      }, 5500);
+    });
 
-    return { appHeihgt, isSafari, mainHeihgt };
+    return {};
   },
 };
 </script>
@@ -41,7 +32,6 @@ export default {
 html,
 body {
   width: 100%;
-  height: auto;
   background: linear-gradient(70deg, #72edf2, rgb(121, 178, 243)) 100% 100%
     no-repeat;
   padding: 0;
@@ -51,48 +41,37 @@ body {
   }
 }
 .wrapping {
+  width: 100%;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   .main {
+    width: 100%;
     min-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 36px;
+    padding: 24px;
+    h1 {
+      font-size: 20px;
+    }
+    h2 {
+      margin-top: 20px;
+      font-size: 28px;
+      text-align: center;
+    }
+    h3 {
+      margin-top: 20px;
+      font-size: 22px;
+    }
     @include pad {
       min-height: 80vh;
     }
   }
 }
-
-.disable {
-  pointer-events: none !important;
-}
-/* .footer {
-  width: 100%;
-  padding: 8px;
-  background-color: #fff;
-  text-align: center;
-  font-size: 12px;
-  color: #000;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  @include mobile {
-    flex-direction: column;
-  }
-  a {
-    color: rgb(121, 178, 243);
-  }
-  &__langBtn {
-    a {
-      display: inline-block;
-      margin: 0 12px 8px;
-      font-size: 18px;
-      @include mobile {
-        font-size: 14px;
-      }
-    }
-  }
-} */
 #app {
   width: 100%;
   height: 100%;

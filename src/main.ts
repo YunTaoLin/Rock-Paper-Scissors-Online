@@ -10,9 +10,11 @@ import routes from "./router";
 // console.log("routes", routes);
 export const createApp = ViteSSG(
   App,
-  { routes, base: "/" },
+  { routes, base: "/Rock-Paper-Scissors-Online/" },
   ({ app, router, routes, isClient, initialState }) => {
-    Object.values(import.meta.globEager('./modules/*.ts')).map(i => i.install?.(app))
+    Object.values(import.meta.globEager("./modules/*.ts")).map((i) =>
+      i.install?.(app)
+    );
     app.use(store);
     if (import.meta.env.MODE == "local" || import.meta.env.MODE == "dev") {
       app.config.performance = true;
@@ -20,7 +22,9 @@ export const createApp = ViteSSG(
     } else {
       app.config.performance = false;
     }
-    Object.values(import.meta.globEager('./modules/*.ts')).map(i => i.install?.(app))
+    Object.values(import.meta.globEager("./modules/*.ts")).map((i) =>
+      i.install?.(app)
+    );
   }
 );
 

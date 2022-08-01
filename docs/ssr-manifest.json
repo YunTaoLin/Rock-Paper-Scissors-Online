@@ -1,342 +1,317 @@
 {
   "vite/modulepreload-polyfill": [
-    "/assets/剪刀.3781ad54.png",
-    "/assets/石頭.401cfcbe.png",
-    "/assets/布.2b9332b0.png"
+    "/Rock-Paper-Scissors-Online/assets/剪刀.3781ad54.png",
+    "/Rock-Paper-Scissors-Online/assets/石頭.401cfcbe.png",
+    "/Rock-Paper-Scissors-Online/assets/布.2b9332b0.png"
   ],
   "node_modules/@vue/reactivity/node_modules/@vue/shared/dist/shared.esm-bundler.js": [
-    "/assets/剪刀.3781ad54.png",
-    "/assets/石頭.401cfcbe.png",
-    "/assets/布.2b9332b0.png"
+    "/Rock-Paper-Scissors-Online/assets/剪刀.3781ad54.png",
+    "/Rock-Paper-Scissors-Online/assets/石頭.401cfcbe.png",
+    "/Rock-Paper-Scissors-Online/assets/布.2b9332b0.png"
   ],
   "node_modules/@vue/reactivity/dist/reactivity.esm-bundler.js": [
-    "/assets/剪刀.3781ad54.png",
-    "/assets/石頭.401cfcbe.png",
-    "/assets/布.2b9332b0.png"
+    "/Rock-Paper-Scissors-Online/assets/剪刀.3781ad54.png",
+    "/Rock-Paper-Scissors-Online/assets/石頭.401cfcbe.png",
+    "/Rock-Paper-Scissors-Online/assets/布.2b9332b0.png"
   ],
   "node_modules/@vue/runtime-core/node_modules/@vue/shared/dist/shared.esm-bundler.js": [
-    "/assets/剪刀.3781ad54.png",
-    "/assets/石頭.401cfcbe.png",
-    "/assets/布.2b9332b0.png"
+    "/Rock-Paper-Scissors-Online/assets/剪刀.3781ad54.png",
+    "/Rock-Paper-Scissors-Online/assets/石頭.401cfcbe.png",
+    "/Rock-Paper-Scissors-Online/assets/布.2b9332b0.png"
   ],
   "node_modules/@vue/runtime-core/dist/runtime-core.esm-bundler.js": [
-    "/assets/剪刀.3781ad54.png",
-    "/assets/石頭.401cfcbe.png",
-    "/assets/布.2b9332b0.png"
+    "/Rock-Paper-Scissors-Online/assets/剪刀.3781ad54.png",
+    "/Rock-Paper-Scissors-Online/assets/石頭.401cfcbe.png",
+    "/Rock-Paper-Scissors-Online/assets/布.2b9332b0.png"
   ],
   "node_modules/@vue/runtime-dom/node_modules/@vue/shared/dist/shared.esm-bundler.js": [
-    "/assets/剪刀.3781ad54.png",
-    "/assets/石頭.401cfcbe.png",
-    "/assets/布.2b9332b0.png"
+    "/Rock-Paper-Scissors-Online/assets/剪刀.3781ad54.png",
+    "/Rock-Paper-Scissors-Online/assets/石頭.401cfcbe.png",
+    "/Rock-Paper-Scissors-Online/assets/布.2b9332b0.png"
   ],
   "node_modules/@vue/runtime-dom/dist/runtime-dom.esm-bundler.js": [
-    "/assets/剪刀.3781ad54.png",
-    "/assets/石頭.401cfcbe.png",
-    "/assets/布.2b9332b0.png"
+    "/Rock-Paper-Scissors-Online/assets/剪刀.3781ad54.png",
+    "/Rock-Paper-Scissors-Online/assets/石頭.401cfcbe.png",
+    "/Rock-Paper-Scissors-Online/assets/布.2b9332b0.png"
   ],
   "node_modules/vue-router/dist/vue-router.esm-bundler.js": [
-    "/assets/剪刀.3781ad54.png",
-    "/assets/石頭.401cfcbe.png",
-    "/assets/布.2b9332b0.png"
+    "/Rock-Paper-Scissors-Online/assets/剪刀.3781ad54.png",
+    "/Rock-Paper-Scissors-Online/assets/石頭.401cfcbe.png",
+    "/Rock-Paper-Scissors-Online/assets/布.2b9332b0.png"
   ],
   "node_modules/@vueuse/head/dist/index.mjs": [
-    "/assets/剪刀.3781ad54.png",
-    "/assets/石頭.401cfcbe.png",
-    "/assets/布.2b9332b0.png"
+    "/Rock-Paper-Scissors-Online/assets/剪刀.3781ad54.png",
+    "/Rock-Paper-Scissors-Online/assets/石頭.401cfcbe.png",
+    "/Rock-Paper-Scissors-Online/assets/布.2b9332b0.png"
   ],
   "node_modules/vite-ssg/dist/chunks/state.mjs": [
-    "/assets/剪刀.3781ad54.png",
-    "/assets/石頭.401cfcbe.png",
-    "/assets/布.2b9332b0.png"
+    "/Rock-Paper-Scissors-Online/assets/剪刀.3781ad54.png",
+    "/Rock-Paper-Scissors-Online/assets/石頭.401cfcbe.png",
+    "/Rock-Paper-Scissors-Online/assets/布.2b9332b0.png"
   ],
   "node_modules/vite-ssg/dist/chunks/ClientOnly.mjs": [
-    "/assets/剪刀.3781ad54.png",
-    "/assets/石頭.401cfcbe.png",
-    "/assets/布.2b9332b0.png"
+    "/Rock-Paper-Scissors-Online/assets/剪刀.3781ad54.png",
+    "/Rock-Paper-Scissors-Online/assets/石頭.401cfcbe.png",
+    "/Rock-Paper-Scissors-Online/assets/布.2b9332b0.png"
   ],
   "node_modules/vite-ssg/dist/index.mjs": [
-    "/assets/剪刀.3781ad54.png",
-    "/assets/石頭.401cfcbe.png",
-    "/assets/布.2b9332b0.png"
-  ],
-  "src/firebase/firebase.json": [
-    "/assets/剪刀.3781ad54.png",
-    "/assets/石頭.401cfcbe.png",
-    "/assets/布.2b9332b0.png"
-  ],
-  "node_modules/@firebase/util/dist/index.esm2017.js": [
-    "/assets/剪刀.3781ad54.png",
-    "/assets/石頭.401cfcbe.png",
-    "/assets/布.2b9332b0.png"
-  ],
-  "node_modules/@firebase/component/dist/esm/index.esm2017.js": [
-    "/assets/剪刀.3781ad54.png",
-    "/assets/石頭.401cfcbe.png",
-    "/assets/布.2b9332b0.png"
-  ],
-  "node_modules/@firebase/logger/dist/esm/index.esm2017.js": [
-    "/assets/剪刀.3781ad54.png",
-    "/assets/石頭.401cfcbe.png",
-    "/assets/布.2b9332b0.png"
-  ],
-  "node_modules/idb/build/wrap-idb-value.js": [
-    "/assets/剪刀.3781ad54.png",
-    "/assets/石頭.401cfcbe.png",
-    "/assets/布.2b9332b0.png"
-  ],
-  "node_modules/idb/build/index.js": [
-    "/assets/剪刀.3781ad54.png",
-    "/assets/石頭.401cfcbe.png",
-    "/assets/布.2b9332b0.png"
-  ],
-  "node_modules/@firebase/app/dist/esm/index.esm2017.js": [
-    "/assets/剪刀.3781ad54.png",
-    "/assets/石頭.401cfcbe.png",
-    "/assets/布.2b9332b0.png"
-  ],
-  "node_modules/@firebase/app-compat/dist/esm/index.esm2017.js": [
-    "/assets/剪刀.3781ad54.png",
-    "/assets/石頭.401cfcbe.png",
-    "/assets/布.2b9332b0.png"
-  ],
-  "node_modules/firebase/compat/app/dist/index.esm.js": [
-    "/assets/剪刀.3781ad54.png",
-    "/assets/石頭.401cfcbe.png",
-    "/assets/布.2b9332b0.png"
-  ],
-  "node_modules/@firebase/database/dist/index.esm2017.js": [
-    "/assets/剪刀.3781ad54.png",
-    "/assets/石頭.401cfcbe.png",
-    "/assets/布.2b9332b0.png"
-  ],
-  "node_modules/@firebase/database-compat/dist/index.esm2017.js": [
-    "/assets/剪刀.3781ad54.png",
-    "/assets/石頭.401cfcbe.png",
-    "/assets/布.2b9332b0.png"
-  ],
-  "src/components/Footer.vue?vue&type=style&index=0&lang.scss": [
-    "/assets/剪刀.3781ad54.png",
-    "/assets/石頭.401cfcbe.png",
-    "/assets/布.2b9332b0.png"
-  ],
-  "src/components/Footer.vue": [
-    "/assets/剪刀.3781ad54.png",
-    "/assets/石頭.401cfcbe.png",
-    "/assets/布.2b9332b0.png"
+    "/Rock-Paper-Scissors-Online/assets/剪刀.3781ad54.png",
+    "/Rock-Paper-Scissors-Online/assets/石頭.401cfcbe.png",
+    "/Rock-Paper-Scissors-Online/assets/布.2b9332b0.png"
   ],
   "src/App.vue?vue&type=style&index=0&lang.scss": [
-    "/assets/剪刀.3781ad54.png",
-    "/assets/石頭.401cfcbe.png",
-    "/assets/布.2b9332b0.png"
+    "/Rock-Paper-Scissors-Online/assets/剪刀.3781ad54.png",
+    "/Rock-Paper-Scissors-Online/assets/石頭.401cfcbe.png",
+    "/Rock-Paper-Scissors-Online/assets/布.2b9332b0.png"
   ],
   "plugin-vue:export-helper": [
-    "/assets/剪刀.3781ad54.png",
-    "/assets/石頭.401cfcbe.png",
-    "/assets/布.2b9332b0.png"
+    "/Rock-Paper-Scissors-Online/assets/剪刀.3781ad54.png",
+    "/Rock-Paper-Scissors-Online/assets/石頭.401cfcbe.png",
+    "/Rock-Paper-Scissors-Online/assets/布.2b9332b0.png"
   ],
   "src/App.vue": [
-    "/assets/剪刀.3781ad54.png",
-    "/assets/石頭.401cfcbe.png",
-    "/assets/布.2b9332b0.png"
+    "/Rock-Paper-Scissors-Online/assets/剪刀.3781ad54.png",
+    "/Rock-Paper-Scissors-Online/assets/石頭.401cfcbe.png",
+    "/Rock-Paper-Scissors-Online/assets/布.2b9332b0.png"
   ],
   "node_modules/vuex/dist/vuex.esm-bundler.js": [
-    "/assets/剪刀.3781ad54.png",
-    "/assets/石頭.401cfcbe.png",
-    "/assets/布.2b9332b0.png"
+    "/Rock-Paper-Scissors-Online/assets/剪刀.3781ad54.png",
+    "/Rock-Paper-Scissors-Online/assets/石頭.401cfcbe.png",
+    "/Rock-Paper-Scissors-Online/assets/布.2b9332b0.png"
   ],
   "src/store.ts": [
-    "/assets/剪刀.3781ad54.png",
-    "/assets/石頭.401cfcbe.png",
-    "/assets/布.2b9332b0.png"
+    "/Rock-Paper-Scissors-Online/assets/剪刀.3781ad54.png",
+    "/Rock-Paper-Scissors-Online/assets/石頭.401cfcbe.png",
+    "/Rock-Paper-Scissors-Online/assets/布.2b9332b0.png"
   ],
   "src/view/Index.vue?vue&type=style&index=0&scoped=true&lang.scss": [
-    "/assets/剪刀.3781ad54.png",
-    "/assets/石頭.401cfcbe.png",
-    "/assets/布.2b9332b0.png"
+    "/Rock-Paper-Scissors-Online/assets/剪刀.3781ad54.png",
+    "/Rock-Paper-Scissors-Online/assets/石頭.401cfcbe.png",
+    "/Rock-Paper-Scissors-Online/assets/布.2b9332b0.png"
   ],
   "src/view/Index.vue": [
-    "/assets/剪刀.3781ad54.png",
-    "/assets/石頭.401cfcbe.png",
-    "/assets/布.2b9332b0.png"
+    "/Rock-Paper-Scissors-Online/assets/剪刀.3781ad54.png",
+    "/Rock-Paper-Scissors-Online/assets/石頭.401cfcbe.png",
+    "/Rock-Paper-Scissors-Online/assets/布.2b9332b0.png"
+  ],
+  "node_modules/@firebase/util/dist/index.esm2017.js": [
+    "/Rock-Paper-Scissors-Online/assets/剪刀.3781ad54.png",
+    "/Rock-Paper-Scissors-Online/assets/石頭.401cfcbe.png",
+    "/Rock-Paper-Scissors-Online/assets/布.2b9332b0.png"
+  ],
+  "node_modules/@firebase/component/dist/esm/index.esm2017.js": [
+    "/Rock-Paper-Scissors-Online/assets/剪刀.3781ad54.png",
+    "/Rock-Paper-Scissors-Online/assets/石頭.401cfcbe.png",
+    "/Rock-Paper-Scissors-Online/assets/布.2b9332b0.png"
+  ],
+  "node_modules/@firebase/logger/dist/esm/index.esm2017.js": [
+    "/Rock-Paper-Scissors-Online/assets/剪刀.3781ad54.png",
+    "/Rock-Paper-Scissors-Online/assets/石頭.401cfcbe.png",
+    "/Rock-Paper-Scissors-Online/assets/布.2b9332b0.png"
+  ],
+  "node_modules/idb/build/wrap-idb-value.js": [
+    "/Rock-Paper-Scissors-Online/assets/剪刀.3781ad54.png",
+    "/Rock-Paper-Scissors-Online/assets/石頭.401cfcbe.png",
+    "/Rock-Paper-Scissors-Online/assets/布.2b9332b0.png"
+  ],
+  "node_modules/idb/build/index.js": [
+    "/Rock-Paper-Scissors-Online/assets/剪刀.3781ad54.png",
+    "/Rock-Paper-Scissors-Online/assets/石頭.401cfcbe.png",
+    "/Rock-Paper-Scissors-Online/assets/布.2b9332b0.png"
+  ],
+  "node_modules/@firebase/app/dist/esm/index.esm2017.js": [
+    "/Rock-Paper-Scissors-Online/assets/剪刀.3781ad54.png",
+    "/Rock-Paper-Scissors-Online/assets/石頭.401cfcbe.png",
+    "/Rock-Paper-Scissors-Online/assets/布.2b9332b0.png"
+  ],
+  "node_modules/@firebase/app-compat/dist/esm/index.esm2017.js": [
+    "/Rock-Paper-Scissors-Online/assets/剪刀.3781ad54.png",
+    "/Rock-Paper-Scissors-Online/assets/石頭.401cfcbe.png",
+    "/Rock-Paper-Scissors-Online/assets/布.2b9332b0.png"
+  ],
+  "node_modules/firebase/compat/app/dist/index.esm.js": [
+    "/Rock-Paper-Scissors-Online/assets/剪刀.3781ad54.png",
+    "/Rock-Paper-Scissors-Online/assets/石頭.401cfcbe.png",
+    "/Rock-Paper-Scissors-Online/assets/布.2b9332b0.png"
   ],
   "node_modules/moment/dist/moment.js": [
-    "/assets/剪刀.3781ad54.png",
-    "/assets/石頭.401cfcbe.png",
-    "/assets/布.2b9332b0.png"
+    "/Rock-Paper-Scissors-Online/assets/剪刀.3781ad54.png",
+    "/Rock-Paper-Scissors-Online/assets/石頭.401cfcbe.png",
+    "/Rock-Paper-Scissors-Online/assets/布.2b9332b0.png"
   ],
   "src/components/createRoom.vue?vue&type=style&index=0&lang.scss": [
-    "/assets/剪刀.3781ad54.png",
-    "/assets/石頭.401cfcbe.png",
-    "/assets/布.2b9332b0.png"
+    "/Rock-Paper-Scissors-Online/assets/剪刀.3781ad54.png",
+    "/Rock-Paper-Scissors-Online/assets/石頭.401cfcbe.png",
+    "/Rock-Paper-Scissors-Online/assets/布.2b9332b0.png"
   ],
   "src/components/createRoom.vue": [
-    "/assets/剪刀.3781ad54.png",
-    "/assets/石頭.401cfcbe.png",
-    "/assets/布.2b9332b0.png"
+    "/Rock-Paper-Scissors-Online/assets/剪刀.3781ad54.png",
+    "/Rock-Paper-Scissors-Online/assets/石頭.401cfcbe.png",
+    "/Rock-Paper-Scissors-Online/assets/布.2b9332b0.png"
   ],
   "src/components/joinRoom.vue?vue&type=style&index=0&lang.scss": [
-    "/assets/剪刀.3781ad54.png",
-    "/assets/石頭.401cfcbe.png",
-    "/assets/布.2b9332b0.png"
+    "/Rock-Paper-Scissors-Online/assets/剪刀.3781ad54.png",
+    "/Rock-Paper-Scissors-Online/assets/石頭.401cfcbe.png",
+    "/Rock-Paper-Scissors-Online/assets/布.2b9332b0.png"
   ],
   "src/components/joinRoom.vue": [
-    "/assets/剪刀.3781ad54.png",
-    "/assets/石頭.401cfcbe.png",
-    "/assets/布.2b9332b0.png"
+    "/Rock-Paper-Scissors-Online/assets/剪刀.3781ad54.png",
+    "/Rock-Paper-Scissors-Online/assets/石頭.401cfcbe.png",
+    "/Rock-Paper-Scissors-Online/assets/布.2b9332b0.png"
   ],
   "src/view/Enter.vue?vue&type=style&index=0&scoped=true&lang.scss": [
-    "/assets/剪刀.3781ad54.png",
-    "/assets/石頭.401cfcbe.png",
-    "/assets/布.2b9332b0.png"
+    "/Rock-Paper-Scissors-Online/assets/剪刀.3781ad54.png",
+    "/Rock-Paper-Scissors-Online/assets/石頭.401cfcbe.png",
+    "/Rock-Paper-Scissors-Online/assets/布.2b9332b0.png"
   ],
   "src/view/Enter.vue": [
-    "/assets/剪刀.3781ad54.png",
-    "/assets/石頭.401cfcbe.png",
-    "/assets/布.2b9332b0.png"
+    "/Rock-Paper-Scissors-Online/assets/剪刀.3781ad54.png",
+    "/Rock-Paper-Scissors-Online/assets/石頭.401cfcbe.png",
+    "/Rock-Paper-Scissors-Online/assets/布.2b9332b0.png"
   ],
   "src/assets/剪刀.png": [
-    "/assets/剪刀.3781ad54.png",
-    "/assets/石頭.401cfcbe.png",
-    "/assets/布.2b9332b0.png"
+    "/Rock-Paper-Scissors-Online/assets/剪刀.3781ad54.png",
+    "/Rock-Paper-Scissors-Online/assets/石頭.401cfcbe.png",
+    "/Rock-Paper-Scissors-Online/assets/布.2b9332b0.png"
   ],
   "src/assets/石頭.png": [
-    "/assets/剪刀.3781ad54.png",
-    "/assets/石頭.401cfcbe.png",
-    "/assets/布.2b9332b0.png"
+    "/Rock-Paper-Scissors-Online/assets/剪刀.3781ad54.png",
+    "/Rock-Paper-Scissors-Online/assets/石頭.401cfcbe.png",
+    "/Rock-Paper-Scissors-Online/assets/布.2b9332b0.png"
   ],
   "src/assets/布.png": [
-    "/assets/剪刀.3781ad54.png",
-    "/assets/石頭.401cfcbe.png",
-    "/assets/布.2b9332b0.png"
+    "/Rock-Paper-Scissors-Online/assets/剪刀.3781ad54.png",
+    "/Rock-Paper-Scissors-Online/assets/石頭.401cfcbe.png",
+    "/Rock-Paper-Scissors-Online/assets/布.2b9332b0.png"
   ],
   "src/view/GameRoom.vue?vue&type=style&index=0&scoped=true&lang.scss": [
-    "/assets/剪刀.3781ad54.png",
-    "/assets/石頭.401cfcbe.png",
-    "/assets/布.2b9332b0.png"
+    "/Rock-Paper-Scissors-Online/assets/剪刀.3781ad54.png",
+    "/Rock-Paper-Scissors-Online/assets/石頭.401cfcbe.png",
+    "/Rock-Paper-Scissors-Online/assets/布.2b9332b0.png"
   ],
   "src/view/GameRoom.vue": [
-    "/assets/剪刀.3781ad54.png",
-    "/assets/石頭.401cfcbe.png",
-    "/assets/布.2b9332b0.png"
+    "/Rock-Paper-Scissors-Online/assets/剪刀.3781ad54.png",
+    "/Rock-Paper-Scissors-Online/assets/石頭.401cfcbe.png",
+    "/Rock-Paper-Scissors-Online/assets/布.2b9332b0.png"
   ],
   "src/components/createRoom-US.vue?vue&type=style&index=0&lang.scss": [
-    "/assets/剪刀.3781ad54.png",
-    "/assets/石頭.401cfcbe.png",
-    "/assets/布.2b9332b0.png"
+    "/Rock-Paper-Scissors-Online/assets/剪刀.3781ad54.png",
+    "/Rock-Paper-Scissors-Online/assets/石頭.401cfcbe.png",
+    "/Rock-Paper-Scissors-Online/assets/布.2b9332b0.png"
   ],
   "src/components/createRoom-US.vue": [
-    "/assets/剪刀.3781ad54.png",
-    "/assets/石頭.401cfcbe.png",
-    "/assets/布.2b9332b0.png"
+    "/Rock-Paper-Scissors-Online/assets/剪刀.3781ad54.png",
+    "/Rock-Paper-Scissors-Online/assets/石頭.401cfcbe.png",
+    "/Rock-Paper-Scissors-Online/assets/布.2b9332b0.png"
   ],
   "src/components/joinRoom-US.vue?vue&type=style&index=0&lang.scss": [
-    "/assets/剪刀.3781ad54.png",
-    "/assets/石頭.401cfcbe.png",
-    "/assets/布.2b9332b0.png"
+    "/Rock-Paper-Scissors-Online/assets/剪刀.3781ad54.png",
+    "/Rock-Paper-Scissors-Online/assets/石頭.401cfcbe.png",
+    "/Rock-Paper-Scissors-Online/assets/布.2b9332b0.png"
   ],
   "src/components/joinRoom-US.vue": [
-    "/assets/剪刀.3781ad54.png",
-    "/assets/石頭.401cfcbe.png",
-    "/assets/布.2b9332b0.png"
+    "/Rock-Paper-Scissors-Online/assets/剪刀.3781ad54.png",
+    "/Rock-Paper-Scissors-Online/assets/石頭.401cfcbe.png",
+    "/Rock-Paper-Scissors-Online/assets/布.2b9332b0.png"
   ],
   "src/view/Enter-US.vue?vue&type=style&index=0&scoped=true&lang.scss": [
-    "/assets/剪刀.3781ad54.png",
-    "/assets/石頭.401cfcbe.png",
-    "/assets/布.2b9332b0.png"
+    "/Rock-Paper-Scissors-Online/assets/剪刀.3781ad54.png",
+    "/Rock-Paper-Scissors-Online/assets/石頭.401cfcbe.png",
+    "/Rock-Paper-Scissors-Online/assets/布.2b9332b0.png"
   ],
   "src/view/Enter-US.vue": [
-    "/assets/剪刀.3781ad54.png",
-    "/assets/石頭.401cfcbe.png",
-    "/assets/布.2b9332b0.png"
+    "/Rock-Paper-Scissors-Online/assets/剪刀.3781ad54.png",
+    "/Rock-Paper-Scissors-Online/assets/石頭.401cfcbe.png",
+    "/Rock-Paper-Scissors-Online/assets/布.2b9332b0.png"
   ],
   "src/view/GameRoom-US.vue?vue&type=style&index=0&scoped=true&lang.scss": [
-    "/assets/剪刀.3781ad54.png",
-    "/assets/石頭.401cfcbe.png",
-    "/assets/布.2b9332b0.png"
+    "/Rock-Paper-Scissors-Online/assets/剪刀.3781ad54.png",
+    "/Rock-Paper-Scissors-Online/assets/石頭.401cfcbe.png",
+    "/Rock-Paper-Scissors-Online/assets/布.2b9332b0.png"
   ],
   "src/view/GameRoom-US.vue": [
-    "/assets/剪刀.3781ad54.png",
-    "/assets/石頭.401cfcbe.png",
-    "/assets/布.2b9332b0.png"
+    "/Rock-Paper-Scissors-Online/assets/剪刀.3781ad54.png",
+    "/Rock-Paper-Scissors-Online/assets/石頭.401cfcbe.png",
+    "/Rock-Paper-Scissors-Online/assets/布.2b9332b0.png"
   ],
   "src/components/createRoom-CN.vue?vue&type=style&index=0&lang.scss": [
-    "/assets/剪刀.3781ad54.png",
-    "/assets/石頭.401cfcbe.png",
-    "/assets/布.2b9332b0.png"
+    "/Rock-Paper-Scissors-Online/assets/剪刀.3781ad54.png",
+    "/Rock-Paper-Scissors-Online/assets/石頭.401cfcbe.png",
+    "/Rock-Paper-Scissors-Online/assets/布.2b9332b0.png"
   ],
   "src/components/createRoom-CN.vue": [
-    "/assets/剪刀.3781ad54.png",
-    "/assets/石頭.401cfcbe.png",
-    "/assets/布.2b9332b0.png"
+    "/Rock-Paper-Scissors-Online/assets/剪刀.3781ad54.png",
+    "/Rock-Paper-Scissors-Online/assets/石頭.401cfcbe.png",
+    "/Rock-Paper-Scissors-Online/assets/布.2b9332b0.png"
   ],
   "src/components/joinRoom-CN.vue?vue&type=style&index=0&lang.scss": [
-    "/assets/剪刀.3781ad54.png",
-    "/assets/石頭.401cfcbe.png",
-    "/assets/布.2b9332b0.png"
+    "/Rock-Paper-Scissors-Online/assets/剪刀.3781ad54.png",
+    "/Rock-Paper-Scissors-Online/assets/石頭.401cfcbe.png",
+    "/Rock-Paper-Scissors-Online/assets/布.2b9332b0.png"
   ],
   "src/components/joinRoom-CN.vue": [
-    "/assets/剪刀.3781ad54.png",
-    "/assets/石頭.401cfcbe.png",
-    "/assets/布.2b9332b0.png"
+    "/Rock-Paper-Scissors-Online/assets/剪刀.3781ad54.png",
+    "/Rock-Paper-Scissors-Online/assets/石頭.401cfcbe.png",
+    "/Rock-Paper-Scissors-Online/assets/布.2b9332b0.png"
   ],
   "src/view/Enter-CN.vue?vue&type=style&index=0&scoped=true&lang.scss": [
-    "/assets/剪刀.3781ad54.png",
-    "/assets/石頭.401cfcbe.png",
-    "/assets/布.2b9332b0.png"
+    "/Rock-Paper-Scissors-Online/assets/剪刀.3781ad54.png",
+    "/Rock-Paper-Scissors-Online/assets/石頭.401cfcbe.png",
+    "/Rock-Paper-Scissors-Online/assets/布.2b9332b0.png"
   ],
   "src/view/Enter-CN.vue": [
-    "/assets/剪刀.3781ad54.png",
-    "/assets/石頭.401cfcbe.png",
-    "/assets/布.2b9332b0.png"
+    "/Rock-Paper-Scissors-Online/assets/剪刀.3781ad54.png",
+    "/Rock-Paper-Scissors-Online/assets/石頭.401cfcbe.png",
+    "/Rock-Paper-Scissors-Online/assets/布.2b9332b0.png"
   ],
   "src/view/GameRoom-CN.vue?vue&type=style&index=0&scoped=true&lang.scss": [
-    "/assets/剪刀.3781ad54.png",
-    "/assets/石頭.401cfcbe.png",
-    "/assets/布.2b9332b0.png"
+    "/Rock-Paper-Scissors-Online/assets/剪刀.3781ad54.png",
+    "/Rock-Paper-Scissors-Online/assets/石頭.401cfcbe.png",
+    "/Rock-Paper-Scissors-Online/assets/布.2b9332b0.png"
   ],
   "src/view/GameRoom-CN.vue": [
-    "/assets/剪刀.3781ad54.png",
-    "/assets/石頭.401cfcbe.png",
-    "/assets/布.2b9332b0.png"
+    "/Rock-Paper-Scissors-Online/assets/剪刀.3781ad54.png",
+    "/Rock-Paper-Scissors-Online/assets/石頭.401cfcbe.png",
+    "/Rock-Paper-Scissors-Online/assets/布.2b9332b0.png"
   ],
   "src/view/Terms.vue?vue&type=style&index=0&lang.scss": [
-    "/assets/剪刀.3781ad54.png",
-    "/assets/石頭.401cfcbe.png",
-    "/assets/布.2b9332b0.png"
+    "/Rock-Paper-Scissors-Online/assets/剪刀.3781ad54.png",
+    "/Rock-Paper-Scissors-Online/assets/石頭.401cfcbe.png",
+    "/Rock-Paper-Scissors-Online/assets/布.2b9332b0.png"
   ],
   "src/view/Terms.vue": [
-    "/assets/剪刀.3781ad54.png",
-    "/assets/石頭.401cfcbe.png",
-    "/assets/布.2b9332b0.png"
+    "/Rock-Paper-Scissors-Online/assets/剪刀.3781ad54.png",
+    "/Rock-Paper-Scissors-Online/assets/石頭.401cfcbe.png",
+    "/Rock-Paper-Scissors-Online/assets/布.2b9332b0.png"
   ],
   "src/view/Terms-US.vue": [
-    "/assets/剪刀.3781ad54.png",
-    "/assets/石頭.401cfcbe.png",
-    "/assets/布.2b9332b0.png"
+    "/Rock-Paper-Scissors-Online/assets/剪刀.3781ad54.png",
+    "/Rock-Paper-Scissors-Online/assets/石頭.401cfcbe.png",
+    "/Rock-Paper-Scissors-Online/assets/布.2b9332b0.png"
   ],
   "src/view/Terms-CN.vue?vue&type=style&index=0&lang.scss": [
-    "/assets/剪刀.3781ad54.png",
-    "/assets/石頭.401cfcbe.png",
-    "/assets/布.2b9332b0.png"
+    "/Rock-Paper-Scissors-Online/assets/剪刀.3781ad54.png",
+    "/Rock-Paper-Scissors-Online/assets/石頭.401cfcbe.png",
+    "/Rock-Paper-Scissors-Online/assets/布.2b9332b0.png"
   ],
   "src/view/Terms-CN.vue": [
-    "/assets/剪刀.3781ad54.png",
-    "/assets/石頭.401cfcbe.png",
-    "/assets/布.2b9332b0.png"
+    "/Rock-Paper-Scissors-Online/assets/剪刀.3781ad54.png",
+    "/Rock-Paper-Scissors-Online/assets/石頭.401cfcbe.png",
+    "/Rock-Paper-Scissors-Online/assets/布.2b9332b0.png"
   ],
   "src/router.ts": [
-    "/assets/剪刀.3781ad54.png",
-    "/assets/石頭.401cfcbe.png",
-    "/assets/布.2b9332b0.png"
+    "/Rock-Paper-Scissors-Online/assets/剪刀.3781ad54.png",
+    "/Rock-Paper-Scissors-Online/assets/石頭.401cfcbe.png",
+    "/Rock-Paper-Scissors-Online/assets/布.2b9332b0.png"
   ],
   "src/main.ts": [
-    "/assets/剪刀.3781ad54.png",
-    "/assets/石頭.401cfcbe.png",
-    "/assets/布.2b9332b0.png"
+    "/Rock-Paper-Scissors-Online/assets/剪刀.3781ad54.png",
+    "/Rock-Paper-Scissors-Online/assets/石頭.401cfcbe.png",
+    "/Rock-Paper-Scissors-Online/assets/布.2b9332b0.png"
   ],
   "index.html": [
-    "/assets/剪刀.3781ad54.png",
-    "/assets/石頭.401cfcbe.png",
-    "/assets/布.2b9332b0.png"
+    "/Rock-Paper-Scissors-Online/assets/剪刀.3781ad54.png",
+    "/Rock-Paper-Scissors-Online/assets/石頭.401cfcbe.png",
+    "/Rock-Paper-Scissors-Online/assets/布.2b9332b0.png"
   ]
 }
